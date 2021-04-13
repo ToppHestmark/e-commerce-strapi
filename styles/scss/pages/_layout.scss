@@ -1,3 +1,28 @@
+@use '../abstracts/variables' as *;
+
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: $screen-xl;
+  margin-top: 3.5rem;
+
+  @media screen and (max-width: $screen-xl) {
+    color: red;
+  }
+
+  @media screen and (max-width: $screen-s) {
+    margin-top: 6rem;
+  }
 }

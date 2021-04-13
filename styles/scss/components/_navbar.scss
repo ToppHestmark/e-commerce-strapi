@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as *;
+
+// Container
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: $screen-xl) {
+    margin-top: 3rem;
+  }
+}
+
+// Wrapper
+.navbar {
+  width: 100%;
+  max-width: $screen-xl;
+  background: var(--clr-dark);
+
+  &__logo {
+    @media screen and (min-width: $screen-lg) {
+      position: absolute;
+      left: 50%;
+      right: 50%;
+    }
+  }
+
+  &__toggler-icon {
+    color: var(--clr-white);
+  }
+}
+
+.nav-links {
+  &__link {
+    color: var(--clr-white);
+
+    &:hover,
+    &:active {
+      color: var(--clr-primary);
+    }
+  }
+}

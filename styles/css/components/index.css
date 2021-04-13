@@ -1,3 +1,53 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .nav {
+    margin-top: 3rem;
+  }
+}
 
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  background: var(--clr-dark);
+}
+@media screen and (min-width: 992px) {
+  .navbar__logo {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+  }
+}
+.navbar__toggler-icon {
+  color: var(--clr-white);
+}
+
+.nav-links__link {
+  color: var(--clr-white);
+}
+.nav-links__link:hover, .nav-links__link:active {
+  color: var(--clr-primary);
+}
+
+.searchbar__input {
+  background: var(--clr-dark);
+  border-radius: 0;
+  border: 0;
+}
+.searchbar__input:focus {
+  background: var(--clr-white);
+  color: var(--clr-dark);
+}
+@media screen and (max-width: 480px) {
+  .searchbar {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
