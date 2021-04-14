@@ -1,13 +1,5 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css";
 @import "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css";
-:root {
-  --clr-primary: #ea325b;
-  --clr-light: #eee;
-  --clr-white: #fff;
-  --clr-dark: #000;
-  --clr-dark-300: #333;
-}
-
 .nav {
   position: fixed;
   width: 100%;
@@ -24,39 +16,64 @@
 .navbar {
   width: 100%;
   max-width: 1200px;
-  background: var(--clr-dark);
+  background: #000;
 }
-@media screen and (min-width: 992px) {
-  .navbar__logo {
-    position: absolute;
-    left: 50%;
-    right: 50%;
-  }
+.navbar__toggler-btn {
+  background: transparent;
+  border: none;
+  outline: 0;
 }
 .navbar__toggler-icon {
-  color: var(--clr-white);
+  font-size: 1.5rem;
+  opacity: 0.8;
+  color: #fff;
+}
+.navbar__toggler-icon:hover {
+  color: #ea325b;
+}
+.navbar__logo {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  color: red;
+  transform: translate(-50%, 50%);
+}
+@media screen and (min-width: 992px) {
+  .navbar__toggler-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navbar {
+    background: #fff;
+  }
+  .navbar__toggler-icon {
+    color: #000;
+  }
 }
 
 .nav-links__link {
-  color: var(--clr-white);
+  color: #fff;
 }
 .nav-links__link:hover, .nav-links__link:active {
-  color: var(--clr-primary);
+  color: #ea325b;
 }
-
-.searchbar__input {
-  background: var(--clr-dark);
-  border-radius: 0;
-  border: 0;
+@media screen and (max-width: 992px) {
+  .nav-links {
+    border-top: 0.5px solid #000;
+    border-bottom: 0.5px solid #000;
+  }
+  .nav-links__link {
+    padding: 0;
+    margin: 0.5em 0 0.5em 0.6em;
+  }
+  .nav-links:first-child {
+    margin-top: 0.8em;
+  }
 }
-.searchbar__input:focus {
-  background: var(--clr-white);
-  color: var(--clr-dark);
-}
-@media screen and (max-width: 480px) {
-  .searchbar {
-    width: 100%;
-    margin: 0.5rem 0;
+@media screen and (max-width: 1200px) {
+  .nav-links__link {
+    color: #000;
   }
 }
 
@@ -76,17 +93,44 @@ body {
 main {
   width: 100%;
   max-width: 1200px;
-  margin-top: 3.5rem;
+  margin-top: 6.5rem;
 }
 @media screen and (max-width: 1200px) {
   main {
-    color: red;
+    color: #ea325b;
+    margin-top: 3.5rem;
   }
 }
 @media screen and (max-width: 480px) {
   main {
-    margin-top: 6rem;
+    margin-top: 4.5rem;
   }
+}
+
+.home-banner {
+  width: 100%;
+  max-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-banner__image {
+  width: 100%;
+  min-width: 800px;
+}
+.home-banner__text {
+  position: absolute;
+  color: #eee;
+  z-index: 2;
+}
+.home-banner__text h1 {
+  font-size: 4rem;
+}
+
+.subheader {
+  z-index: 3;
+  color: palevioletred;
+  position: absolute;
 }
 
 /*# sourceMappingURL=main.css.map */

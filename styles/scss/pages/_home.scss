@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.home-banner {
+  width: 100%;
+  max-height: 40vh;
+
+  @include flex-center;
+
+  &__image {
+    width: 100%;
+    min-width: 800px;
+    // filter: sepia(20%) grayscale(70%) brightness(80%)
+  }
+
+  &__text {
+    position: absolute;
+    color: $clr--light;
+    z-index: 2;
+
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+.subheader {
+  z-index: 3;
+  color: palevioletred;
+  position: absolute;
+}

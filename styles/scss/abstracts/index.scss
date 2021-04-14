@@ -2,4 +2,4 @@
 @forward 'variables';
 @forward 'fonts';
 @forward 'colors';
-@use './mixins';
+@forward './mixins/flexbox';

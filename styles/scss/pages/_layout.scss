@@ -1,4 +1,4 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
 * {
   margin: 0;
@@ -16,13 +16,14 @@ body {
 main {
   width: 100%;
   max-width: $screen-xl;
-  margin-top: 3.5rem;
+  margin-top: 6.5rem;
 
   @media screen and (max-width: $screen-xl) {
-    color: red;
+    color: $clr--primary;
+    margin-top: 3.5rem;
   }
 
   @media screen and (max-width: $screen-s) {
-    margin-top: 6rem;
+    margin-top: 4.5rem;
   }
 }

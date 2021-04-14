@@ -1,4 +1,4 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
 // Container
 .nav {
@@ -17,28 +17,74 @@
 .navbar {
   width: 100%;
   max-width: $screen-xl;
-  background: var(--clr-dark);
+  background: $clr--dark;
 
-  &__logo {
-    @media screen and (min-width: $screen-lg) {
-      position: absolute;
-      left: 50%;
-      right: 50%;
-    }
+  &__toggler-btn {
+    background: transparent;
+    border: none;
+    outline: 0;
   }
 
   &__toggler-icon {
-    color: var(--clr-white);
+    font-size: 1.5rem;
+    opacity: 0.8;
+    color: $clr--white;
+
+    &:hover {
+      color: $clr--primary;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    color: red;
+    transform: translate(-50%, 50%);
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    &__toggler-btn {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $screen-xl) {
+    background: $clr--white;
+
+    &__toggler-icon {
+      color: $clr--dark;
+    }
   }
 }
 
 .nav-links {
   &__link {
-    color: var(--clr-white);
+    color: $clr--white;
 
     &:hover,
     &:active {
-      color: var(--clr-primary);
+      color: $clr--primary;
+    }
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    border-top: 0.5px solid $clr--dark;
+    border-bottom: 0.5px solid $clr--dark;
+
+    &__link {
+      padding: 0;
+      margin: 0.5em 0 0.5em 0.6em;
+    }
+
+    &:first-child {
+      margin-top: 0.8em;
+    }
+  }
+
+  @media screen and (max-width: $screen-xl) {
+    &__link {
+      color: $clr--dark;
     }
   }
 }
