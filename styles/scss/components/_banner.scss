@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.home-banner {
+  width: 100%;
+  min-height: 60vh;
+  max-height: 70vh;
+  overflow: hidden;
+
+  @include flex-center;
+
+  &__image {
+    width: 100%;
+    min-width: 800px;
+    filter: sepia(10%) opacity(90%) saturate(120%) grayscale(50%);
+  }
+
+  &__text {
+    position: absolute;
+    color: $clr--light;
+    z-index: 2;
+
+    h1 {
+      font-size: 4rem;
+      color: $clr--primary;
+    }
+  }
+}

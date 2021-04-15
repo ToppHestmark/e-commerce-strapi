@@ -69,8 +69,8 @@
   }
 
   @media screen and (max-width: $screen-lg) {
-    border-top: 0.5px solid $clr--dark;
-    border-bottom: 0.5px solid $clr--dark;
+    border-top: 0.5px solid $clr--dark-700;
+    border-bottom: 0.5px solid $clr--dark-700;
 
     &__link {
       padding: 0;

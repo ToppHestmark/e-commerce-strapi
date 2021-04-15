@@ -1,25 +1,42 @@
-import { baseUrl, homeBanner } from "../settings/apis.js";
+import { baseUrl, homeBanner, productsUrl } from "../settings/apis.js";
+import { createBanner } from "../components/index.js";
 
-const createBanner = async () => {
-  const bannerContainer = document.querySelector(".home-banner");
+createBanner(baseUrl, homeBanner);
+
+const featuredProducts = async () => {
+  const featuredContainer = document.querySelector(".featured");
 
   try {
-    const getBanner = await (await fetch(homeBanner)).json();
-    // const bannerImg = baseUrl + getBanner.hero_banner.url;
-    const bannerAltText = getBanner.hero_banner_alt_text;
+    const getProducts = await (await fetch(productsUrl)).json();
 
-    bannerContainer.innerHTML = `
-    <img
-      class="home-banner__image"
-      src="./assets/temp/bergen.jpg"
-      alt=${bannerAltText}
-    />
-    <div class="home-banner__text">
-      <h1>Hello home</h1>
-    </div>
-    `;
+    getProducts.forEach((product) => {
+      if (!product.featured) return null;
+
+      const title = product.title;
+      const productImage = baseUrl + product.image.url;
+      const id = product.id;
+
+      featuredContainer.innerHTML += `
+      <div class="featured__card">
+        <h4> ${title} </h4>
+        <div class="featured__image-wrapper">
+          <img 
+            src='${productImage}' 
+            alt='${title}' 
+            />
+        </div>
+        <a 
+          class="featured__link"
+          href="details.html?product_id=${id}"
+          >
+          Read more
+        </a>
+      </div>
+      `;
+    });
   } catch (err) {
     console.log(err);
   }
 };
-createBanner();
+
+featuredProducts();

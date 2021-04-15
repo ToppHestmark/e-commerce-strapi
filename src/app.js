@@ -1,3 +1,4 @@
-import { navbar } from "./components/common/index.js";
+import { createNavbar, createFooter } from "./components/index.js";
 
-navbar();
+createNavbar();
+createFooter();

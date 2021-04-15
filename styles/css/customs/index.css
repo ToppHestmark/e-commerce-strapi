@@ -1,0 +1,17 @@
+.body--preventScrolling {
+  height: 100%;
+  overflow: hidden;
+}
+.body--preventScrolling:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #020024;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0.8424369748) 0%, rgba(24, 24, 25, 0.8648459384) 0%);
+  z-index: 8;
+}
+
+/*# sourceMappingURL=index.css.map */

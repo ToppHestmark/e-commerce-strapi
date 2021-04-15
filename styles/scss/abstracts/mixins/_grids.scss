@@ -1,0 +1,17 @@
+@use '../variables' as *;
+
+@mixin grid-auto {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  justify-content: space-between;
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
+
+  @media screen and (max-width: $screen-md) {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 2em;
+    grid-column-gap: 0.7em;
+  }
+}

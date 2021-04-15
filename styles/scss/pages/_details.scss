@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.details {
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__image-wrapper {
+    flex: 0.6;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__right {
+    flex: 0.4;
+  }
+
+  &__add-to-cart {
+    font-size: 2rem;
+    color: $clr--dark-700;
+    cursor: pointer;
+
+    &:hover {
+      &::after {
+        content: "Add to cart";
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: Arial, Helvetica, sans-serif;
+        position: fixed;
+        background: #e0e0e0;
+        color: $clr--dark-300;
+        border-radius: 5px;
+        padding: 0.5em;
+        margin: 2.2em 0 0 -1em;
+        border: 0.5px solid $clr--dark-700;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-md) {
+  }
+}

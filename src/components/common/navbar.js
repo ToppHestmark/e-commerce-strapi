@@ -1,6 +1,6 @@
 const navContainer = document.querySelector(".nav");
 
-const navbar = () => {
+const createNavbar = () => {
   navContainer.innerHTML = `
   <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -42,7 +42,7 @@ const navbar = () => {
           </ul>
         </div>
             
-        <aside class="auth">
+        <aside class="navbar__auth">
           <li class="nav-item nav-links__item">
             <a 
               class="nav-link nav-links__link" 
@@ -56,6 +56,12 @@ const navbar = () => {
       </div>
   </nav>
   `;
+
+  const navToggler = document.querySelector(".navbar__toggler-btn");
+  navToggler.onclick = () => {
+    const body = document.querySelector("body");
+    body.classList.toggle("body--preventScrolling");
+  };
 };
 
-export default navbar;
+export default createNavbar;
