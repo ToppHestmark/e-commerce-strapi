@@ -1,14 +1,6 @@
 @use '../abstracts' as *;
 
-.home {
-  margin-top: 0;
-
-  &__subheader {
-    margin: 2em 0;
-  }
-}
-
-.featured {
+.products {
   @include grid-auto;
 
   &__image-wrapper {

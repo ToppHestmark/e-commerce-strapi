@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.searchbox-wrapper {
+  width: 100%;
+  @include flex-center;
+}
+
+#search-box {
+  margin: 1em;
+  padding-bottom: 0.2em;
+  font-size: 1.25rem;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid $clr--dark-700;
+
+  &::placeholder {
+    font-size: 0.85rem;
+  }
+}

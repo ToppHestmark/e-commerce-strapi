@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.message-container {
+  @include position-center;
+
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  z-index: 2;
+}
+
+.message-container :is(.warning, .success, .error) {
+  min-width: 310px;
+  padding: 3em;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $clr--dark-300;
+}

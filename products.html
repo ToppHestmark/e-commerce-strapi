@@ -10,11 +10,19 @@
   </head>
   <body>
     <div class="nav"></div>
-    <main>
-      <h1>PRODUCTS</h1>
-      <h1>Products page</h1>
+    <main class="products-page">
+      <header class="products-page__header">
+        <h1>PRODUCTS</h1>
+      </header>
+
+      <div class="searchbox-wrapper">
+        <input id="search-box" placeholder="Search by titles or descriptions" />
+      </div>
+
+      <section class="products"></section>
     </main>
 
+    <div class="message-container"></div>
     <footer class="footer"></footer>
 
     <script
@@ -22,6 +30,8 @@
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"
     ></script>
+
     <script src="./src/app.js" type="module"></script>
+    <script src="./src/pages/products.js" type="module"></script>
   </body>
 </html>

@@ -25,19 +25,34 @@
     color: $clr--dark-700;
     cursor: pointer;
 
+    &:after {
+      content: "";
+      font-size: 0.85rem;
+      font-weight: 400;
+      font-family: Arial, Helvetica, sans-serif;
+      position: fixed;
+      background: #e9e8e8d5;
+      color: $clr--dark-300;
+      border-radius: 2px;
+      margin: 2.2em 0 0 -1em;
+
+      @include box-shadow;
+    }
+
     &:hover {
       &::after {
         content: "Add to cart";
-        font-size: 1rem;
-        font-weight: 400;
-        font-family: Arial, Helvetica, sans-serif;
-        position: fixed;
-        background: #e0e0e0;
-        color: $clr--dark-300;
-        border-radius: 5px;
         padding: 0.5em;
-        margin: 2.2em 0 0 -1em;
-        border: 0.5px solid $clr--dark-700;
+      }
+    }
+
+    &.fa-shopping-cart {
+      color: $clr--primary;
+
+      &:hover {
+        &::after {
+          content: "Remove from cart";
+        }
       }
     }
   }
