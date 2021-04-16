@@ -12,7 +12,7 @@ const showDetails = (product) => {
   const image = baseUrl + product.image.url;
 
   const itemFromCart = getExistingCart();
-  const isInCart = itemFromCart.includes(productId.toString());
+  const isInCart = itemFromCart.find((item) => parseInt(item.id) === productId);
   const cartIconState = isInCart ? "fa-shopping-cart" : "fa-cart-arrow-down";
 
   detailsContainer.innerHTML = `

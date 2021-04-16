@@ -8,11 +8,11 @@ const toggleCart = (event) => {
   const id = event.target.dataset.id;
 
   const currentCart = getExistingCart();
-  const newItem = currentCart.filter(() => id !== id);
-  const itemExist = currentCart.includes(id);
+  const newItem = currentCart.filter((cart) => cart.id !== id);
+  const itemExist = currentCart.find((cart) => cart.id === id);
 
   return !itemExist
-    ? currentCart.push(id) & saveToCart(currentCart)
+    ? currentCart.push({ id }) && saveToCart(currentCart)
     : saveToCart(newItem);
 };
 

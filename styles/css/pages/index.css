@@ -148,4 +148,15 @@ main {
   height: auto;
 }
 
+.cart__card {
+  display: flex;
+}
+.cart__image-wrapper {
+  max-width: 200px;
+}
+.cart__image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
 /*# sourceMappingURL=index.css.map */

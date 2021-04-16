@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+.cart {
+  &__card {
+    display: flex;
+  }
+
+  &__image-wrapper {
+    max-width: 200px;
+
+    @include img-responsive;
+  }
+}
