@@ -1,0 +1,6 @@
+@use '../abstracts' as *;
+
+.login {
+  @include flex-col-center;
+  min-height: 75vh;
+}

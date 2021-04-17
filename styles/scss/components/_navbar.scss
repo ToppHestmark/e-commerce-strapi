@@ -59,8 +59,13 @@
 }
 
 .nav-links {
+  &__active {
+    color: $clr--primary !important;
+  }
+
   &__link {
     color: $clr--white;
+    cursor: pointer;
 
     &:hover,
     &:active {

@@ -1,8 +1,11 @@
 @use '../abstracts' as *;
 
 .cart {
+  &__container {
+  }
+
   &__card {
-    display: flex;
+    @include flex-between;
   }
 
   &__image-wrapper {

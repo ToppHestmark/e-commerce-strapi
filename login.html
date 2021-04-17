@@ -10,11 +10,25 @@
   </head>
   <body>
     <div class="nav"></div>
-    <main>
-      <h1>LOGIN</h1>
-      <h1>Login page</h1>
-    </main>
+    <main class="login">
+        <h1>Log in</h1>
+     <form class="form" id="login-form">
+        <div class="form-message-container"></div>
+        
+        <div class="form__input-wrapper">
+          <label for="username"> Username/email</label>
+          <input id="username" />
+        </div>
 
+        <div class="form__input-wrapper"></div>
+         <label for="password"> Password</label>
+         <input id="password" type="password" />
+        </div>
+       <button>Submit</button>
+      </form>
+
+    </main>
+  
     <footer class="footer"></footer>
 
     <script
@@ -23,5 +37,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./src/app.js" type="module"></script>
+    <script src="./src/pages/login.js" type="module"></script>
   </body>
 </html>

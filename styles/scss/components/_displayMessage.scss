@@ -16,3 +16,17 @@
   font-weight: 600;
   color: $clr--dark-300;
 }
+
+.form-message-container {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.form-message-container :is(.error) {
+  color: $clr--danger;
+}
+
+.form-message-container :is(.success) {
+  color: $clr--success;
+}

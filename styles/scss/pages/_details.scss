@@ -40,6 +40,8 @@
     }
 
     &:hover {
+      color: $clr--primary;
+
       &::after {
         content: "Add to cart";
         padding: 0.5em;

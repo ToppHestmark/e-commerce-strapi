@@ -1,11 +1,64 @@
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css";
 @import "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css";
 a {
   text-decoration: none;
   color: #ea325b;
 }
 a:hover {
   color: #000;
+}
+
+label {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+form {
+  min-width: 300px;
+  max-width: 400px;
+  padding: 1em;
+}
+
+.form__input-wrapper {
+  margin-bottom: 1rem;
+}
+
+form input {
+  width: 100%;
+  font-size: 1rem;
+  border: 0;
+  padding: 0.4rem;
+  border-bottom: 1px solid #000;
+  outline: 0;
+}
+
+form textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid rgba(51, 51, 51, 0.685);
+}
+
+form button {
+  width: 100%;
+  height: 40px;
+  margin: 1.25em 0;
+  background: #000;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+form button:active, form button:hover {
+  background: #333;
+}
+
+input[type=file] {
+  color: #333;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
 }
 
 .nav {
@@ -60,8 +113,12 @@ a:hover {
   }
 }
 
+.nav-links__active {
+  color: #ea325b !important;
+}
 .nav-links__link {
   color: #fff;
+  cursor: pointer;
 }
 .nav-links__link:hover, .nav-links__link:active {
   color: #ea325b;
@@ -123,6 +180,20 @@ a:hover {
   color: #333;
 }
 
+.form-message-container {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.form-message-container :is(.error) {
+  color: #ff5959;
+}
+
+.form-message-container :is(.success) {
+  color: #74f369;
+}
+
 .home-banner {
   width: 100%;
   min-height: 60vh;
@@ -169,7 +240,7 @@ a:hover {
   bottom: 0;
   background: #020024;
   background: linear-gradient(90deg, rgba(2, 0, 36, 0.8424369748) 0%, rgba(24, 24, 25, 0.8648459384) 0%);
-  z-index: 8;
+  z-index: 5;
 }
 
 * {
@@ -273,6 +344,9 @@ main {
   -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
   box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
 }
+.details__add-to-cart:hover {
+  color: #ea325b;
+}
 .details__add-to-cart:hover::after {
   content: "Add to cart";
   padding: 0.5em;
@@ -314,6 +388,7 @@ main {
 
 .cart__card {
   display: flex;
+  justify-content: space-between;
 }
 .cart__image-wrapper {
   max-width: 200px;
@@ -321,6 +396,21 @@ main {
 .cart__image-wrapper img {
   width: 100%;
   height: auto;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

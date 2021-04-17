@@ -1,13 +1,3 @@
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css";
-@import "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css";
-a {
-  text-decoration: none;
-  color: #ea325b;
-}
-a:hover {
-  color: #000;
-}
-
 .nav {
   position: fixed;
   width: 100%;
@@ -60,8 +50,12 @@ a:hover {
   }
 }
 
+.nav-links__active {
+  color: #ea325b !important;
+}
 .nav-links__link {
   color: #fff;
+  cursor: pointer;
 }
 .nav-links__link:hover, .nav-links__link:active {
   color: #ea325b;
@@ -121,6 +115,20 @@ a:hover {
   font-size: 1.6rem;
   font-weight: 600;
   color: #333;
+}
+
+.form-message-container {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.form-message-container :is(.error) {
+  color: #ff5959;
+}
+
+.form-message-container :is(.success) {
+  color: #74f369;
 }
 
 .home-banner {

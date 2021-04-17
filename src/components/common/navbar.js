@@ -1,6 +1,54 @@
 const navContainer = document.querySelector(".nav");
+import { getUsername } from "../../utils/storage.js";
+import { performLogout } from "../../helpers/index.js";
 
 const createNavbar = () => {
+  const pathName = location.pathname;
+  const username = getUsername();
+
+  let isAuthenticated = `
+    <li class="nav-item nav-links__item">
+      <a 
+        class='nav-link nav-links__link ${
+          pathName === "/login.html" ? "nav-links__active" : ""
+        }' 
+        href="login.html"
+        >
+        Log in
+      </a>
+    </li>
+  `;
+
+  if (username) {
+    isAuthenticated = `
+      <li class="nav-item nav-links__item">
+        <a 
+          id="logout"
+          class='nav-link nav-links__link' 
+          >
+          Log out
+        </a>
+      </li>
+      
+    `;
+  }
+
+  let userOptions = "";
+  if (username) {
+    userOptions = `
+      <li class="nav-item nav-links__item">
+        <a 
+          class='nav-link nav-links__link ${
+            pathName === "/add.html" ? "nav-links__active" : ""
+          }' 
+          href="add.html"
+          >
+          Add product
+        </a>
+      </li>
+    `;
+  }
+
   navContainer.innerHTML = `
   <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -31,31 +79,38 @@ const createNavbar = () => {
             class="nav-links navbar-nav me-auto mb-3 mb-lg-0"
             >
             <li class="nav-item nav-links__item">
-              <a class="nav-link nav-links__link" href="index.html">Home</a>
+              <a class='nav-link nav-links__link ${
+                pathName === "/index.html" ? "nav-links__active" : ""
+              }'
+                href="index.html">
+                Home
+              </a>
             </li>
             <li class="nav-item nav-links__item">
-              <a class="nav-link nav-links__link" href="./products.html">Products</a>
+              <a class='nav-link nav-links__link ${
+                pathName === "/products.html" ? "nav-links__active" : ""
+              }' 
+              href="./products.html">Products</a>
             </li>
             <li class="nav-item nav-links__item">
-              <a class="nav-link nav-links__link" href="./cart.html">Cart</a>
+              <a class='nav-link nav-links__link ${
+                pathName === "/cart.html" ? "nav-links__active" : ""
+              }' 
+              href="./cart.html">Cart</a>
             </li>
+            ${userOptions}
           </ul>
         </div>
             
-        <aside class="navbar__auth">
-          <li class="nav-item nav-links__item">
-            <a 
-              class="nav-link nav-links__link" 
-              href="login.html"
-              >
-              Login
-            </a>
-          </li>
+        <aside class="navbar__right">
+         ${isAuthenticated}
         </aside>
         
       </div>
   </nav>
   `;
+
+  performLogout();
 
   const navToggler = document.querySelector(".navbar__toggler-btn");
   navToggler.onclick = () => {

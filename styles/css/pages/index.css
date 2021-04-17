@@ -1,13 +1,3 @@
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css";
-@import "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css";
-a {
-  text-decoration: none;
-  color: #ea325b;
-}
-a:hover {
-  color: #000;
-}
-
 * {
   margin: 0;
   box-sizing: border-box;
@@ -109,6 +99,9 @@ main {
   -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
   box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
 }
+.details__add-to-cart:hover {
+  color: #ea325b;
+}
 .details__add-to-cart:hover::after {
   content: "Add to cart";
   padding: 0.5em;
@@ -150,6 +143,7 @@ main {
 
 .cart__card {
   display: flex;
+  justify-content: space-between;
 }
 .cart__image-wrapper {
   max-width: 200px;
@@ -157,6 +151,21 @@ main {
 .cart__image-wrapper img {
   width: 100%;
   height: auto;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=index.css.map */

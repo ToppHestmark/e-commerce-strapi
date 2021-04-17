@@ -13,7 +13,7 @@ const cartPage = async () => {
     if (!cartIds.includes(product.id)) return null;
 
     const title = product.title;
-    const price = product.price;
+    const price = product.price.toFixed(2);
     const productImage = baseUrl + product.image.url;
     const id = product.id;
 
@@ -32,11 +32,24 @@ const cartPage = async () => {
             class="cart__link"
             href="details.html?product_id=${id}"
             >
-            About product
+            View product
           </a>
         </div>
       </div>
     `;
   });
+
+  const subtotalContainer = document.querySelector(".subtotal");
+  const prices = products.map((product) => {
+    if (!cartIds.includes(product.id)) return null;
+    return product.price;
+  });
+  const subtotal = prices.reduce((acc, curr) => acc + curr, 0);
+
+  subtotalContainer.innerHTML = `
+    <span>
+      <strong>Subtotal:</strong> $ ${subtotal.toFixed(2)}
+    </span>
+  `;
 };
 cartPage();

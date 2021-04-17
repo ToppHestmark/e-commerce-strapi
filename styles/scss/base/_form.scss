@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+label {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+form {
+  min-width: 300px;
+  max-width: 400px;
+  padding: 1em;
+}
+
+.form {
+  &__input-wrapper {
+    margin-bottom: 1rem;
+  }
+}
+
+form input {
+  width: 100%;
+  font-size: 1rem;
+  border: 0;
+  padding: 0.4rem;
+  border-bottom: 1px solid $clr--dark;
+  outline: 0;
+}
+
+form textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid $clr--dark-700;
+}
+
+form button {
+  width: 100%;
+  height: 40px;
+  margin: 1.25em 0;
+  background: $clr--dark;
+  color: $clr--light;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+
+  &:active,
+  &:hover {
+    background: $clr--dark-300;
+  }
+}
+
+input[type="file"] {
+  color: $clr--dark-300;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}

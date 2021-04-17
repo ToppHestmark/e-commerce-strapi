@@ -1,0 +1,5 @@
+@use '../abstracts' as *;
+
+.add {
+  @include flex-col-center;
+}
