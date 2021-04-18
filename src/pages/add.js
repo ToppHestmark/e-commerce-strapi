@@ -1,15 +1,14 @@
 import { displayMessage } from "../components/index.js";
 import { getUserToken } from "../utils/storage.js";
-import { clearMessage, setFocus } from "../helpers/index.js";
+import { clearMessage, setFocus, addNewProduct } from "../helpers/index.js";
 
 const token = getUserToken();
-if (!token) location.href = "/index.html" || "/";
+if (!token) window.location.replace("/");
 
 const addProductForm = document.querySelector("#add-form");
 const titleInput = document.querySelector("#title");
 const priceInput = document.querySelector("#price");
 const featuredInput = document.querySelector("#featured");
-const imageFileInput = document.querySelector("#image");
 const imageUrlInput = document.querySelector("#image_url");
 const descriptionInput = document.querySelector("#description");
 const messageWrapper = document.querySelector(".form-message-container");
@@ -22,15 +21,14 @@ addProductForm.onsubmit = (event) => {
   messageWrapper.innerHTML = "";
 
   const titleValue = titleInput.value.trim();
-  const priceValue = priceInput.value;
-  const featuredValue = featuredInput.childNodes;
-  const imageFileValue = imageFileInput.value;
-  const imageUrlValue = imageUrlInput.value.trim();
+  const priceValue = parseInt(priceInput.value);
+  const featuredValue = featuredInput.checked;
+  const imageUrlValue = imageUrlInput.value;
   const descriptionValue = descriptionInput.value.trim();
 
   if (
     titleValue.length === 0 ||
-    priceValue <= 0 ||
+    isNaN(priceValue) ||
     imageUrlValue.length === 0 ||
     descriptionValue.length === 0
   ) {
@@ -41,11 +39,16 @@ addProductForm.onsubmit = (event) => {
     );
   }
 
-  addNewArticle(
+  const props = {
     titleValue,
+    priceValue,
+    featuredValue,
+    imageFileValue,
     imageUrlValue,
     descriptionValue,
     addProductForm,
-    token
-  );
+    token,
+  };
+
+  // addNewProduct(props);
 };

@@ -5,6 +5,7 @@ const createBanner = async (baseUrl, homeBanner) => {
     const getBanner = await (await fetch(homeBanner)).json();
     const bannerImg = baseUrl + getBanner.hero_banner.url;
     const bannerAltText = getBanner.hero_banner_alt_text;
+    console.log(getBanner);
 
     bannerContainer.innerHTML = `
       <img

@@ -7,8 +7,10 @@ const showProducts = (products) => {
   products.map((product) => {
     const title = product.title;
     const price = product.price;
-    const productImage = baseUrl + product.image.url;
+    const productImage = baseUrl + product.image[0].url;
     const id = product.id;
+
+    console.log(product);
 
     productsContainer.innerHTML += `
       <div class="products__card">
