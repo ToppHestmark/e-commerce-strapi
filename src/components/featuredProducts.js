@@ -1,4 +1,4 @@
-import { baseUrl, productsUrl } from "../settings/apis.js";
+import { productsUrl } from "../settings/apis.js";
 
 const featuredProducts = async () => {
   const featuredContainer = document.querySelector(".featured");
@@ -10,7 +10,7 @@ const featuredProducts = async () => {
       if (!product.featured) return null;
 
       const title = product.title;
-      const productImage = baseUrl + product.image.url;
+      const productImage = product.image_url;
       const id = product.id;
 
       featuredContainer.innerHTML += `

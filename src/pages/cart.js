@@ -1,4 +1,4 @@
-import { productsUrl, baseUrl } from "../settings/apis.js";
+import { productsUrl } from "../settings/apis.js";
 import { getExistingCart } from "../utils/storage.js";
 
 const cartContainer = document.querySelector(".cart__container");
@@ -14,7 +14,7 @@ const cartPage = async () => {
 
     const title = product.title;
     const price = product.price.toFixed(2);
-    const productImage = baseUrl + product.image.url;
+    const productImage = product.image_url;
     const id = product.id;
 
     cartContainer.innerHTML += `

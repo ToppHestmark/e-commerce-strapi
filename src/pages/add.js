@@ -43,12 +43,11 @@ addProductForm.onsubmit = (event) => {
     titleValue,
     priceValue,
     featuredValue,
-    imageFileValue,
     imageUrlValue,
     descriptionValue,
     addProductForm,
     token,
   };
 
-  // addNewProduct(props);
+  addNewProduct(props);
 };

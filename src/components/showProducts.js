@@ -1,5 +1,7 @@
-import { baseUrl } from "../settings/apis.js";
 const productsContainer = document.querySelector(".products");
+import { getUsername } from "../utils/storage.js";
+
+const username = getUsername();
 
 const showProducts = (products) => {
   productsContainer.innerHTML = "";
@@ -7,10 +9,17 @@ const showProducts = (products) => {
   products.map((product) => {
     const title = product.title;
     const price = product.price;
-    const productImage = baseUrl + product.image[0].url;
+    const productImage = product.image_url;
     const id = product.id;
 
-    console.log(product);
+    let editPage = "";
+    if (username) {
+      editPage = `<a 
+        class="products__link authenticated"  
+        href="edit.html?product_id=${id}"
+        >
+        Edit product</a>`;
+    }
 
     productsContainer.innerHTML += `
       <div class="products__card">
@@ -28,6 +37,7 @@ const showProducts = (products) => {
           >
           More details
         </a>
+        ${editPage}
       </div>
     `;
   });

@@ -1,4 +1,3 @@
-import { baseUrl } from "../settings/apis.js";
 import { toggleCart } from "../helpers/index.js";
 import { getExistingCart } from "../utils/storage.js";
 
@@ -9,7 +8,7 @@ const showDetails = (product) => {
   const description = product.description;
   const price = product.price;
   const productId = product.id;
-  const image = baseUrl + product.image.url;
+  const image = product.image_url;
 
   const itemFromCart = getExistingCart();
   const isInCart = itemFromCart.find((item) => parseInt(item.id) === productId);

@@ -1,11 +1,10 @@
 const bannerContainer = document.querySelector(".home-banner");
 
-const createBanner = async (baseUrl, homeBanner) => {
+const createBanner = async (homeBanner) => {
   try {
     const getBanner = await (await fetch(homeBanner)).json();
-    const bannerImg = baseUrl + getBanner.hero_banner.url;
+    const bannerImg = getBanner.image_url;
     const bannerAltText = getBanner.hero_banner_alt_text;
-    console.log(getBanner);
 
     bannerContainer.innerHTML = `
       <img
