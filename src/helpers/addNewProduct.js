@@ -31,7 +31,6 @@ const addNewProduct = async (props) => {
 
   try {
     const res = await (await fetch(url, options)).json();
-    console.log(res);
 
     if (res.created_at) {
       displayMessage(

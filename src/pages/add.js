@@ -21,7 +21,7 @@ addProductForm.onsubmit = (event) => {
   messageWrapper.innerHTML = "";
 
   const titleValue = titleInput.value.trim();
-  const priceValue = parseInt(priceInput.value);
+  const priceValue = priceInput.value;
   const featuredValue = featuredInput.checked;
   const imageUrlValue = imageUrlInput.value;
   const descriptionValue = descriptionInput.value.trim();

@@ -8,7 +8,7 @@ const showProducts = (products) => {
 
   products.map((product) => {
     const title = product.title;
-    const price = product.price;
+    const price = product.price.toFixed(2);
     const productImage = product.image_url;
     const id = product.id;
 
