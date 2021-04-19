@@ -1,6 +1,11 @@
 import { productsUrl } from "../settings/apis.js";
 import { getUserToken } from "../utils/storage.js";
-import { clearMessage, deleteProduct } from "../helpers/index.js";
+import {
+  clearMessage,
+  deleteProduct,
+  updateProduct,
+} from "../helpers/index.js";
+import { displayMessage } from "../components/index.js";
 
 const params = new URLSearchParams(document.location.search.toString());
 const id = params.get("product_id");
@@ -9,6 +14,7 @@ const productById = `${productsUrl}/${id}`;
 const token = getUserToken();
 if (!token) window.location.replace("/");
 
+const editHeader = document.querySelector(".edit__header");
 const editProductForm = document.querySelector("#edit-form");
 const deleteBtn = document.querySelector(".form__deleteBtn");
 const titleInput = document.querySelector("#title");
@@ -30,14 +36,48 @@ const editPageHtml = async () => {
     imageUrlInput.value = product.image_url;
     descriptionInput.value = product.description;
 
-    document.title = "Edit " + titleInput.value;
+    document.title = `Update ${product.title}`;
+    editHeader.innerHTML = `Update ${product.title}`;
 
-    deleteBtn.onclick = (e) => {
-      e.preventDefault();
-      deleteProduct(id, token);
-    };
+    deleteBtn.onclick = () => deleteProduct(id, token);
   } catch (error) {
     console.log(error);
   }
 };
 editPageHtml();
+
+editProductForm.onsubmit = (event) => {
+  event.preventDefault();
+  messageWrapper.innerHTML = "";
+
+  const titleValue = titleInput.value.trim();
+  const priceValue = priceInput.value;
+  const featuredValue = featuredInput.checked;
+  const imageUrlValue = imageUrlInput.value;
+  const descriptionValue = descriptionInput.value.trim();
+
+  if (
+    titleValue.length === 0 ||
+    isNaN(priceValue) ||
+    imageUrlValue.length === 0 ||
+    descriptionValue.length === 0
+  ) {
+    return displayMessage(
+      "error",
+      "Please apply proper value!",
+      ".form-message-container"
+    );
+  }
+
+  const props = {
+    titleValue,
+    priceValue,
+    featuredValue,
+    imageUrlValue,
+    descriptionValue,
+    token,
+    id,
+  };
+
+  updateProduct(props);
+};

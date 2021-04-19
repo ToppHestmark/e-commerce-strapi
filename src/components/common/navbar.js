@@ -37,11 +37,10 @@ const createNavbar = () => {
   if (username) {
     userOptions = `
       <li class="nav-item nav-links__item">
-        <a 
+        <a href="add.html"
           class='nav-link nav-links__link ${
             pathName === "/add.html" ? "nav-links__active" : ""
           }' 
-          href="add.html"
           >
           Add product
         </a>

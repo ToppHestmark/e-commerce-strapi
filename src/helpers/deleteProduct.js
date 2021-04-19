@@ -6,7 +6,6 @@ const deleteProduct = async (id, token) => {
   const options = {
     method: "DELETE",
     headers: {
-      "Content-Type": "application/json",
       Authorization: "Bearer " + token,
     },
   };

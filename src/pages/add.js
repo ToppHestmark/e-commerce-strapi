@@ -34,7 +34,7 @@ addProductForm.onsubmit = (event) => {
   ) {
     return displayMessage(
       "error",
-      "Please apply proper values!",
+      "Please apply proper value!",
       ".form-message-container"
     );
   }

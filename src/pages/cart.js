@@ -48,7 +48,7 @@ const cartPage = async () => {
 
   subtotalContainer.innerHTML = `
     <span>
-      <strong>Subtotal:</strong> $ ${subtotal.toFixed(2)}
+      Subtotal: <strong> $ ${subtotal.toFixed(2)} </strong>
     </span>
   `;
 };
