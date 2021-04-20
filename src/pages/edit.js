@@ -23,6 +23,7 @@ const featuredInput = document.querySelector("#featured");
 const imageUrlInput = document.querySelector("#image_url");
 const descriptionInput = document.querySelector("#description");
 const messageWrapper = document.querySelector(".form-message-container");
+const loadingContainer = document.querySelector(".loading");
 
 clearMessage(messageWrapper);
 
@@ -36,12 +37,17 @@ const editPageHtml = async () => {
     imageUrlInput.value = product.image_url;
     descriptionInput.value = product.description;
 
-    document.title = `Update ${product.title}`;
-    editHeader.innerHTML = `Update ${product.title}`;
+    document.title = `Edit ${product.title}`;
+    editHeader.innerHTML = `Edit ${product.title}`;
 
     deleteBtn.onclick = () => deleteProduct(id, token);
   } catch (error) {
     console.log(error);
+  } finally {
+    setTimeout(() => {
+      loadingContainer.style.display = "none";
+      editProductForm.style.display = "block";
+    }, 1000);
   }
 };
 editPageHtml();

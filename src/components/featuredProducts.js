@@ -1,8 +1,9 @@
 import { productsUrl } from "../settings/apis.js";
 
-const featuredProducts = async () => {
-  const featuredContainer = document.querySelector(".featured");
+const featuredContainer = document.querySelector(".featured");
+const subHeader = document.querySelector(".home__subheader");
 
+const featuredProducts = async () => {
   try {
     const products = await (await fetch(productsUrl)).json();
 
@@ -33,6 +34,8 @@ const featuredProducts = async () => {
     });
   } catch (err) {
     console.log(err);
+  } finally {
+    subHeader.style.display = "block";
   }
 };
 

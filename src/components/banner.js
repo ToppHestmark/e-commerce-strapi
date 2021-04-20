@@ -1,4 +1,5 @@
 const bannerContainer = document.querySelector(".home-banner");
+const loadingContainer = document.querySelector(".loading");
 
 const createBanner = async (homeBanner) => {
   try {
@@ -19,6 +20,8 @@ const createBanner = async (homeBanner) => {
     `;
   } catch (err) {
     console.log(err);
+  } finally {
+    loadingContainer.style.display = "none";
   }
 };
 

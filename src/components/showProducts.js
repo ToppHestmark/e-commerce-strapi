@@ -1,5 +1,5 @@
-const productsContainer = document.querySelector(".products");
 import { getUsername } from "../utils/storage.js";
+const productsContainer = document.querySelector(".products");
 
 const username = getUsername();
 
