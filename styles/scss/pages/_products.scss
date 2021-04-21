@@ -4,11 +4,22 @@
   @include grid-auto;
 
   &__image-wrapper {
-    @include flex-center;
-    width: 100%;
-    overflow: hidden;
-    max-height: 300px;
-
+    @include flex-col-center;
     @include img-responsive;
+
+    aspect-ratio: 5 / 7;
+    overflow: hidden;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    a {
+      margin: 0.05em 0;
+    }
+  }
+
+  &__price {
+    margin: 0.4em 0;
   }
 }

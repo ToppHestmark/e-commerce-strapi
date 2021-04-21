@@ -1,7 +1,6 @@
 import { productsUrl } from "../settings/apis.js";
 
 const featuredContainer = document.querySelector(".featured");
-const subHeader = document.querySelector(".home__subheader");
 
 const featuredProducts = async () => {
   try {
@@ -34,8 +33,6 @@ const featuredProducts = async () => {
     });
   } catch (err) {
     console.log(err);
-  } finally {
-    subHeader.style.display = "block";
   }
 };
 

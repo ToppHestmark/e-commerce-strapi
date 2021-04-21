@@ -47,7 +47,7 @@ const editPageHtml = async () => {
     setTimeout(() => {
       loadingContainer.style.display = "none";
       editProductForm.style.display = "block";
-    }, 1000);
+    }, 700);
   }
 };
 editPageHtml();

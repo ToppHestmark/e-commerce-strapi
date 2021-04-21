@@ -6,3 +6,4 @@ export { default as searchBox } from "./searchBox.js";
 export { default as showProducts } from "./showProducts.js";
 export { default as showDetails } from "./showDetails.js";
 export { default as featuredProducts } from "./featuredProducts.js";
+export { lowerFlyer, upperFlyer } from "./flyers.js";

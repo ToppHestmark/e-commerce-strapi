@@ -2,10 +2,20 @@
 
 .home {
   margin-top: 0;
+}
+.home-header {
+  @include section-spacing;
+  @include border-bottom;
+  text-align: center;
 
-  &__subheader {
-    display: none;
-    margin: 2em 0;
+  @media screen and (min-width: $screen-md) {
+    @include flex-between;
+    text-align: start;
+
+    &__left,
+    &__right {
+      flex: 0.48;
+    }
   }
 }
 
@@ -18,6 +28,14 @@
     overflow: hidden;
     max-height: 300px;
 
+    @include img-responsive;
+  }
+}
+
+.inspired {
+  @include grid-auto;
+
+  &__img-wrapper {
     @include img-responsive;
   }
 }

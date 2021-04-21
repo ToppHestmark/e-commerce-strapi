@@ -13,10 +13,6 @@ const createBanner = async (homeBanner) => {
         src='${bannerImg}'
         alt='${bannerAltText}'
       />
-      <div class="home-banner__text">
-        <h1>Nordic choice of styles</h1>
-        <p>Denim for everyone, to everyday wear.</p>
-      </div>
     `;
   } catch (err) {
     console.log(err);

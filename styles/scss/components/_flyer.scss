@@ -1,0 +1,72 @@
+@use '../abstracts' as *;
+
+.home-flyer {
+  width: 100%;
+  @include flex-between;
+  @include section-spacing;
+  @include img-responsive;
+
+  &__image-wrapper,
+  &__text-wrapper {
+    flex: 0.49;
+  }
+
+  &__text-wrapper {
+    @include flex-col-between;
+
+    background: $clr--gray-light;
+    text-align: center;
+
+    &__top,
+    &__bottom {
+      margin: 2.25em;
+    }
+
+    h2 {
+      color: $clr--primary;
+      padding: 0.785em;
+    }
+  }
+
+  &__text-wrapper__mid {
+    @include flex-col-between;
+    align-items: center;
+
+    .input-group {
+      max-width: 400px;
+      padding: 0 0.5em;
+    }
+
+    input {
+      border-radius: 0;
+      border: 1px solid $clr--gray-dark;
+    }
+
+    button {
+      border: 1px solid $clr--gray-dark;
+      background: $clr--gray-dark;
+
+      &:hover {
+        background: $clr--dark;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    @include flex-col-center;
+
+    &__image-wrapper,
+    &__text-wrapper {
+      flex: 1;
+      width: 100%;
+      aspect-ratio: 1/1;
+      margin-bottom: 2em;
+    }
+  }
+
+  @media screen and (max-width: $screen-s) {
+    &__text-wrapper {
+      aspect-ratio: unset;
+    }
+  }
+}

@@ -18,7 +18,8 @@ const showProducts = (products) => {
         class="products__link authenticated"  
         href="edit.html?product_id=${id}"
         >
-        Edit product</a>`;
+        Edit product
+      </a>`;
     }
 
     productsContainer.innerHTML += `
@@ -31,13 +32,15 @@ const showProducts = (products) => {
             />
         </div>
         <div class="products__price">$ ${price} </div>
-        <a 
-          class="products__link"
-          href="details.html?product_id=${id}"
-          >
-          More details
-        </a>
-        ${editPage}
+        <div class="products__links">
+          <a 
+            class="products__link"
+            href="details.html?product_id=${id}"
+            >
+            More details
+          </a>
+          ${editPage}
+        </div>
       </div>
     `;
   });

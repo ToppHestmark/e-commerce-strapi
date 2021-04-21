@@ -1,0 +1,5 @@
+@use '../colors' as *;
+
+@mixin border-bottom {
+  border-bottom: 1px solid $clr--gray-border;
+}
