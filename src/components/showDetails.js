@@ -30,11 +30,13 @@ const showDetails = (product) => {
           data-id="${productId}" 
           >
         </i>
-      </div>
-    </div>
-    <div class="details__description">
-      <h4>About</h4>
-      <p> ${description} </p>
+
+        <div class="details__description-wrapper">
+          <h5>Description</h5>
+          <p> ${description} </p>
+        </div>
+        
+        </div>
     </div>
   `;
 

@@ -7,7 +7,7 @@
 }
 @media screen and (min-width: 1200px) {
   .nav {
-    margin-top: 3rem;
+    margin-top: 2.375rem;
   }
 }
 
@@ -46,6 +46,7 @@
 }
 @media screen and (max-width: 1200px) {
   .navbar {
+    border-bottom: 1px solid #d1d1d1;
     background: #fff;
   }
   .navbar__toggler-icon {
@@ -86,12 +87,11 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 #search-box {
   margin: 1em;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.125em;
   font-size: 1.25rem;
   border: 0;
   outline: 0;
@@ -102,14 +102,14 @@
 }
 
 .message-container {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   padding: 1em;
   text-align: center;
-  z-index: 2;
+  z-index: -1;
 }
 
 .message-container :is(.warning, .success, .error) {
@@ -121,8 +121,7 @@
 }
 
 .form-message-container {
-  width: 100%;
-  height: 30px;
+  max-width: 400px;
   text-align: center;
 }
 
@@ -131,22 +130,38 @@
 }
 
 .form-message-container :is(.success) {
-  color: #74f369;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
+  -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
+  box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
+  padding: 1.6em;
+  font-size: 2rem;
+  color: #dfdfdf;
+  background: #4bb543;
+  z-index: 5;
 }
 
 .home-banner {
-  width: 100%;
-  min-height: 55vh;
-  max-height: 65vh;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  min-height: 50vh;
+  max-height: 56vh;
+  overflow: hidden;
 }
 .home-banner__image {
   width: 100%;
   min-width: 800px;
   filter: sepia(10%) opacity(90%) saturate(120%) grayscale(50%);
+}
+@media screen and (min-width: 768px) {
+  .home-banner {
+    max-height: 75vh;
+  }
 }
 
 .footer {
@@ -166,9 +181,9 @@
 .loading {
   color: #ea325b;
   position: absolute;
-  top: 30%;
+  top: 40%;
   right: 50%;
-  bottom: 70%;
+  bottom: 60%;
   left: 50%;
 }
 
@@ -176,8 +191,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 0.5em 0;
-  padding: 1.5em 0em;
+  padding: 2em 0em;
 }
 .home-flyer img {
   width: 100%;

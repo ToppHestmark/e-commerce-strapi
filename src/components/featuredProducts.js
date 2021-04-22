@@ -15,13 +15,13 @@ const featuredProducts = async () => {
 
       featuredContainer.innerHTML += `
         <div class="featured__card">
-          <h4> ${title} </h4>
           <div class="featured__image-wrapper">
             <img 
               src='${productImage}' 
               alt='${title}' 
               />
           </div>
+          <h4 class="featured__title"> ${title} </h4>
           <a 
             class="featured__link"
             href="details.html?product_id=${id}"

@@ -1,6 +1,14 @@
 @use '../abstracts' as *;
 
+#login-form {
+  max-width: 430px;
+}
+
 .login {
   @include flex-col-center;
   min-height: 75vh;
+
+  &__button {
+    margin-top: 2em;
+  }
 }

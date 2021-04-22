@@ -2,4 +2,8 @@
 
 .add {
   @include flex-col-center;
+
+  &__header {
+    margin-top: 0.625em;
+  }
 }

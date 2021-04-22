@@ -1,14 +1,39 @@
 @use '../abstracts' as *;
 
 body {
-  line-height: 1.5;
+  line-height: 1.625;
+  word-spacing: 0.6px;
+}
+
+h1,
+h2 {
+  font-family: secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+:is(h3, h4, h5) {
+  font-family: primary-med;
+}
+
+p {
+  font-family: primary-reg;
+  font-size: 1.0125rem;
 }
 
 a {
   text-decoration: none;
+  letter-spacing: 0.4px;
   color: $clr--primary;
 
   &:hover {
     color: $clr--dark;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  p {
+    font-size: 0.875rem;
   }
 }

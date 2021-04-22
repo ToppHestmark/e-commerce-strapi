@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nor Denim | Add products</title>
     <meta name="author" content="Suphachai Hestmark" />
+    <meta
+      name="descriptions"
+      content="Add a new product to the store and make more money, stay hungry and be business smart."
+    />
     <link rel="stylesheet" href="./styles/css/main.css" />
   </head>
   <body>
     <div class="nav"></div>
     <main class="add">
-      <h1>Add a product</h1>
+      <h1 class="add__header">Add a new product</h1>
+      <div class="form-message-container"></div>
 
       <form class="form" id="add-form">
-        <div class="form-message-container"></div>
-
         <div class="form__input-wrapper">
           <label for="title">Title:</label>
           <input id="title" />
@@ -31,7 +34,7 @@
             >Feature this product</label
           >
           <input
-            class="form-check-input featured"
+            class="form-check-input"
             type="checkbox"
             id="featured"
             name="featured"
@@ -49,7 +52,7 @@
 
         <div class="form__input-wrapper">
           <label for="description">Description</label>
-          <textarea rows="4" id="description"></textarea>
+          <textarea rows="6" id="description"></textarea>
         </div>
 
         <button>Submit</button>

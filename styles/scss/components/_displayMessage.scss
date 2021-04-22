@@ -6,7 +6,7 @@
   width: 100%;
   padding: 1em;
   text-align: center;
-  z-index: 2;
+  z-index: -1;
 }
 
 .message-container :is(.warning, .success, .error) {
@@ -18,8 +18,7 @@
 }
 
 .form-message-container {
-  width: 100%;
-  height: 30px;
+  max-width: 400px;
   text-align: center;
 }
 
@@ -28,5 +27,11 @@
 }
 
 .form-message-container :is(.success) {
-  color: $clr--success;
+  @include position-center;
+  @include box-shadow;
+  padding: 1.6em;
+  font-size: 2rem;
+  color: $clr--gray-dark;
+  background: $clr--success;
+  z-index: 5;
 }

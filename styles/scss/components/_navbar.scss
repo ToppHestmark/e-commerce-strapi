@@ -9,7 +9,7 @@
   justify-content: center;
 
   @media screen and (min-width: $screen-xl) {
-    margin-top: 3rem;
+    margin-top: 2.375rem;
   }
 }
 
@@ -54,6 +54,7 @@
   }
 
   @media screen and (max-width: $screen-xl) {
+    @include border-bottom;
     background: $clr--white;
 
     &__toggler-icon {

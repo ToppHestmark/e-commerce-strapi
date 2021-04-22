@@ -3,12 +3,16 @@
 .details {
   width: 100%;
 
+  &__container {
+    @include section-spacing;
+  }
+
   &__wrapper {
     display: flex;
   }
 
   &__image-wrapper {
-    flex: 0.6;
+    flex: 0.4;
 
     img {
       width: 100%;
@@ -16,8 +20,13 @@
     }
   }
 
+  &__description-wrapper {
+    max-width: 500px;
+  }
+
   &__right {
-    flex: 0.4;
+    flex: 0.6;
+    padding: 1em;
   }
 
   &__add-to-cart {
@@ -60,5 +69,14 @@
   }
 
   @media screen and (max-width: $screen-md) {
+    &__description-wrapper {
+      max-width: 500px;
+    }
+  }
+
+  @media screen and (max-width: $screen-s) {
+    &__wrapper {
+      display: block;
+    }
   }
 }

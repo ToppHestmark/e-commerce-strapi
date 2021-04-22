@@ -1,3 +1,11 @@
+@use '../abstracts' as *;
+
 #edit-form {
   display: none;
+}
+
+.edit {
+  &__header {
+    margin-top: 0.625em;
+  }
 }

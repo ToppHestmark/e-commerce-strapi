@@ -2,14 +2,14 @@
 
 @mixin grid-auto {
   display: grid;
-  grid-template-columns: repeat(3, 31.5vw);
+  grid-template-columns: repeat(3, 385px);
   grid-template-rows: repeat(3, auto);
   justify-content: space-between;
-  grid-row-gap: 1.785em;
+  grid-row-gap: 1.5em;
   grid-column-gap: 0.785em;
 
-  @media screen and (min-width: $screen-xl) {
-    grid-template-columns: repeat(3, 27vw);
+  @media screen and (max-width: $screen-xl) {
+    grid-template-columns: repeat(3, 31.5vw);
   }
 
   @media screen and (max-width: $screen-md) {

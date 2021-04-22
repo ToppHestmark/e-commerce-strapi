@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit product</title>
     <meta name="author" content="Suphachai Hestmark" />
+    <meta
+      name="descriptions"
+      content="Update a item according to your desire of specifications and stay up to date with your customer."
+    />
     <link rel="stylesheet" href="./styles/css/main.css" />
   </head>
   <body>
@@ -16,10 +20,9 @@
       <div class="spinner-grow loading" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
+      <div class="form-message-container"></div>
 
       <form class="form" id="edit-form">
-        <div class="form-message-container"></div>
-
         <div class="form__input-wrapper">
           <label for="title">Title:</label>
           <input id="title" />
@@ -30,12 +33,12 @@
           <input type="number" id="price" name="price" step="0.01" />
         </div>
 
+        <label class="form-check-label" for="featured"
+          >Feature this product</label
+        >
         <div class="form__input-wrapper form-check form-switch">
-          <label class="form-check-label" for="featured"
-            >Feature this product</label
-          >
           <input
-            class="form-check-input featured"
+            class="form-check-input"
             type="checkbox"
             id="featured"
             name="featured"
@@ -49,7 +52,7 @@
 
         <div class="form__input-wrapper">
           <label for="description">Description</label>
-          <textarea rows="4" id="description"></textarea>
+          <textarea rows="6" id="description"></textarea>
         </div>
 
         <button>Submit</button>
