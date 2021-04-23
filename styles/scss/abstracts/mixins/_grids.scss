@@ -9,17 +9,17 @@
   grid-column-gap: 0.785em;
 
   @media screen and (max-width: $screen-xl) {
-    grid-template-columns: repeat(3, 31.5vw);
+    grid-template-columns: repeat(3, 31vw);
   }
 
   @media screen and (max-width: $screen-md) {
-    grid-template-columns: repeat(2, 47vw);
+    grid-template-columns: repeat(2, 46vw);
     grid-template-rows: repeat(2, auto);
     grid-column-gap: 0.625em;
   }
 
   @media screen and (max-width: $screen-s) {
-    grid-template-columns: repeat(2, 46.5vw);
+    grid-template-columns: repeat(2, 45.5vw);
     grid-column-gap: 0.25em;
   }
 }

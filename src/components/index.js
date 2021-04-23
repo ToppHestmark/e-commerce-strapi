@@ -8,3 +8,5 @@ export { default as showDetails } from "./showDetails.js";
 export { default as featuredProducts } from "./featuredProducts.js";
 export { lowerFlyer, upperFlyer } from "./flyers.js";
 export { inspiredSectionHtml } from "./inspiredSectionHtml.js";
+export { default as showTotalPrice } from "./showTotalPrice.js";
+export { default as showCartItems } from "./showCartItems.js";

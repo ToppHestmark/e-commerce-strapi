@@ -1,5 +1,6 @@
 import { productsUrl } from "../settings/apis.js";
 
+const featuredIntroContainer = document.querySelector(".feature-intro");
 const featuredContainer = document.querySelector(".featured");
 
 const featuredProducts = async () => {
@@ -9,26 +10,26 @@ const featuredProducts = async () => {
     products.forEach((product) => {
       if (!product.featured) return null;
 
+      if (product) {
+        featuredIntroContainer.style.display = "flex";
+        featuredContainer.style.display = "grid";
+      }
+
       const title = product.title;
       const productImage = product.image_url;
       const id = product.id;
 
       featuredContainer.innerHTML += `
-        <div class="featured__card">
+        <a href="details.html?product_id=${id}" 
+          class="featured__card">
           <div class="featured__image-wrapper">
             <img 
               src='${productImage}' 
               alt='${title}' 
               />
           </div>
-          <h4 class="featured__title"> ${title} </h4>
-          <a 
-            class="featured__link"
-            href="details.html?product_id=${id}"
-            >
-            More details
-          </a>
-        </div>
+          <p class="featured__title"> ${title} </p>
+        </a>
       `;
     });
   } catch (err) {

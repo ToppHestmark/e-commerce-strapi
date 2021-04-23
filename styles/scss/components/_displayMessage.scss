@@ -4,15 +4,14 @@
   @include position-center;
 
   width: 100%;
-  padding: 1em;
   text-align: center;
   z-index: -1;
 }
 
-.message-container :is(.warning, .success, .error) {
-  min-width: 310px;
-  padding: 3em;
-  font-size: 1.6rem;
+.message-container :is(.message, .success, .error) {
+  min-width: 280px;
+  padding: 1.625em;
+  font-size: 1.125rem;
   font-weight: 600;
   color: $clr--dark-300;
 }

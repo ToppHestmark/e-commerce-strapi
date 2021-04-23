@@ -29,6 +29,7 @@
 
   @include flex-col-center;
   @include section-spacing;
+  display: none;
 
   h5,
   p {
@@ -41,9 +42,15 @@
   @include grid-auto;
   @include border-bottom;
   @include section-spacing;
+  display: none;
+
+  &__card {
+    padding: 0.875em;
+  }
 
   &__title {
-    font-size: 1.175rem;
+    font-size: 0.9375rem;
+    color: $clr--dark;
   }
 
   &__image-wrapper {
@@ -55,8 +62,11 @@
   }
 
   @media screen and (max-width: $screen-md) {
-    &__title,
-    &__link {
+    &__card {
+      padding: 0;
+    }
+
+    &__title {
       margin: 0;
       font-size: 0.875rem;
     }

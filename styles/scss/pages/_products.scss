@@ -6,10 +6,13 @@
 
   &__card {
     margin-bottom: 1.625em;
+    padding: 0.875em;
   }
 
-  &__title {
-    font-size: 1.175rem;
+  &__title,
+  &__price {
+    color: $clr--dark;
+    font-size: 0.9375rem;
   }
 
   &__image-wrapper {
@@ -19,30 +22,15 @@
     overflow: hidden;
   }
 
-  &__links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    .authenticated {
-      color: $clr--dark;
-
-      &:hover {
-        color: $clr--dark-700;
-      }
-    }
-  }
-
   &__link {
     margin: 0.05em 0;
   }
 
-  &__price {
-    margin: 0.4em 0;
-    padding: 0;
-  }
-
   @media screen and (max-width: $screen-md) {
+    &__card {
+      padding: 0;
+    }
+
     &__title {
       font-size: 0.875rem;
     }
@@ -50,18 +38,6 @@
     &__price,
     &__links {
       font-size: 0.875rem;
-    }
-  }
-
-  @media screen and (min-width: $screen-lg) {
-    &__links {
-      flex-direction: row;
-    }
-
-    &__link {
-      &:nth-child(2) {
-        padding-left: 1.625em;
-      }
     }
   }
 

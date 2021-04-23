@@ -23,25 +23,22 @@ const showProducts = (products) => {
     }
 
     productsContainer.innerHTML += `
-      <div class="products__card">
-        <h4 class="products__title"> ${title} </h4>
+    <div class="products__card">
+      <a href="details.html?product_id=${id}"
+         >
         <div class="products__image-wrapper">
           <img 
             src='${productImage}' 
             alt='${title}' 
             />
         </div>
+        <div class="products__title"> ${title} </div>
         <div class="products__price">$ ${price} </div>
-        <div class="products__links">
-          <a 
-            class="products__link"
-            href="details.html?product_id=${id}"
-            >
-            More details
-          </a>
-          ${editPage}
+        </a>
+        <div>
+         ${editPage}
         </div>
-      </div>
+    </div>
     `;
   });
 };

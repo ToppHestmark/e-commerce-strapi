@@ -1,23 +1,23 @@
 body {
+  font-family: primary-reg, Arial, Helvetica, sans-serif;
   line-height: 1.625;
   word-spacing: 0.6px;
 }
 
 h1,
 h2 {
-  font-family: secondary;
+  font-family: secondary, "Times New Roman", Times, serif;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   word-spacing: 1px;
 }
 
 :is(h3, h4, h5) {
-  font-family: primary-med;
+  font-family: primary-med, "Times New Roman", Times, serif;
 }
 
 p {
-  font-family: primary-reg;
-  font-size: 1.0125rem;
+  font-size: 0.975rem;
 }
 
 a {
