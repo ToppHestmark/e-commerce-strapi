@@ -67,7 +67,7 @@ const createNavbar = () => {
         </button>
 
         <a class="navbar__logo" href="./index.html">
-        LOGO
+        <img src="/assets/logo.svg" alt="Nordic Swag brand identity" />
         </a>
 
         <div 

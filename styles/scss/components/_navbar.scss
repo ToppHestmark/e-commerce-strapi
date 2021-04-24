@@ -41,15 +41,47 @@
 
   &__logo {
     position: absolute;
-    top: 2%;
-    left: 49%;
-    color: red;
-    transform: translate(-50%, 50%);
+    top: 0;
+    left: 45%;
+    right: 55%;
+    width: 45px;
+
+    img {
+      border-radius: 50%;
+      background-color: $clr--white;
+      border: 5px solid $clr--white;
+    }
+  }
+
+  @media screen and (max-width: $screen-s) {
+    &__logo {
+      left: 43%;
+      right: 58%;
+    }
   }
 
   @media screen and (min-width: $screen-lg) {
     &__toggler-btn {
       display: none;
+    }
+
+    &__logo {
+      top: -10%;
+      width: 65px;
+      padding-top: 0.5em;
+      left: 46.5%;
+      right: 53.5%;
+
+      img {
+        border: 7px solid $clr--white;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    &__logo {
+      top: -18%;
+      padding-top: 0;
     }
   }
 

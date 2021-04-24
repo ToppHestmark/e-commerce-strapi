@@ -34,14 +34,41 @@
 }
 .navbar__logo {
   position: absolute;
-  top: 2%;
-  left: 49%;
-  color: red;
-  transform: translate(-50%, 50%);
+  top: 0;
+  left: 45%;
+  right: 55%;
+  width: 45px;
+}
+.navbar__logo img {
+  border-radius: 50%;
+  background-color: #fff;
+  border: 5px solid #fff;
+}
+@media screen and (max-width: 480px) {
+  .navbar__logo {
+    left: 43%;
+    right: 58%;
+  }
 }
 @media screen and (min-width: 992px) {
   .navbar__toggler-btn {
     display: none;
+  }
+  .navbar__logo {
+    top: -10%;
+    width: 65px;
+    padding-top: 0.5em;
+    left: 46.5%;
+    right: 53.5%;
+  }
+  .navbar__logo img {
+    border: 7px solid #fff;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navbar__logo {
+    top: -18%;
+    padding-top: 0;
   }
 }
 @media screen and (max-width: 1200px) {

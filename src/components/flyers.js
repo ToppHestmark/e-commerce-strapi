@@ -5,7 +5,7 @@ export const upperFlyer = `
   <div class="home-flyer__text-wrapper">
     <p class="home-flyer__text-wrapper__top">SIGN UP FOR</p>
     <div class="home-flyer__text-wrapper__mid">
-      <h2>NOR DENIM LEWSLETTER</h2>
+      <h2>NORDIC SWAG LEWSLETTER</h2>
       <div class="input-group mb-3">
         <input
           type="email"
