@@ -44,10 +44,9 @@ const addNewProduct = async (props) => {
     res.error &&
       displayMessage("error", res.message, ".form-message-container");
   } catch (error) {
-    console.log(error);
     displayMessage(
       "error",
-      "Error occured when trying to connection to server..",
+      "Ooops, an error occured when connection to the server.",
       ".form-message-container"
     );
   }

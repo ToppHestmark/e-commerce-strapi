@@ -398,6 +398,11 @@ main {
   margin-top: 0.625em;
   font-family: primary-med;
 }
+@media screen and (max-width: 1200px) {
+  .add__header {
+    margin-top: 1.175em;
+  }
+}
 
 #edit-form {
   display: none;
@@ -406,6 +411,11 @@ main {
 .edit__header {
   margin-top: 0.625em;
   font-family: primary-med;
+}
+@media screen and (max-width: 1200px) {
+  .edit__header {
+    margin-top: 1.175em;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

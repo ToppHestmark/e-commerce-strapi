@@ -9,4 +9,10 @@
     margin-top: 0.625em;
     font-family: primary-med;
   }
+
+  @media screen and (max-width: $screen-xl) {
+    &__header {
+      margin-top: 1.175em;
+    }
+  }
 }

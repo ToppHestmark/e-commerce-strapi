@@ -3,17 +3,26 @@
 .home-banner {
   @include flex-center;
   width: 100%;
-  min-height: 50vh;
-  max-height: 56vh;
+  min-height: 65vh;
   overflow: hidden;
 
   &__image {
     width: 100%;
-    min-width: 800px;
-    filter: sepia(10%) opacity(90%) saturate(120%) grayscale(50%);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: contrast(120%) invert(5%) saturate(125%) sepia(15%) grayscale(20%)
+      blur(0.4px);
   }
 
   @media screen and (min-width: $screen-md) {
-    max-height: 75vh;
+    min-height: 75vh;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    &__image {
+      background-position: center top;
+    }
   }
 }
