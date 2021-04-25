@@ -53,12 +53,22 @@
     color: $clr--dark;
   }
 
+  &__link {
+    font-size: 0.9375rem;
+  }
+
   &__image-wrapper {
     @include flex-center;
     @include img-responsive;
     width: 100%;
     overflow: hidden;
     aspect-ratio: 5 / 7;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    &__title {
+      margin-bottom: 0;
+    }
   }
 
   @media screen and (max-width: $screen-md) {

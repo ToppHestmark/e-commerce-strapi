@@ -15,11 +15,12 @@ const showProducts = (products) => {
     let editPage = "";
     if (username) {
       editPage = `<a 
-        class="products__link authenticated"  
-        href="edit.html?product_id=${id}"
-        >
-        Edit product
-      </a>`;
+          class="products__link authenticated"  
+          href="edit.html?product_id=${id}"
+          >
+          Edit product
+        </a>
+      `;
     }
 
     productsContainer.innerHTML += `

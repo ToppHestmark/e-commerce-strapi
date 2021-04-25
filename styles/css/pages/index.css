@@ -107,6 +107,9 @@ main {
   font-size: 0.9375rem;
   color: #000;
 }
+.featured__link {
+  font-size: 0.9375rem;
+}
 .featured__image-wrapper {
   display: flex;
   justify-content: center;
@@ -118,6 +121,11 @@ main {
 .featured__image-wrapper img {
   width: 100%;
   height: auto;
+}
+@media screen and (min-width: 768px) {
+  .featured__title {
+    margin-bottom: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .featured__card {

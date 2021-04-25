@@ -1,7 +1,10 @@
 import { productsUrl } from "../settings/apis.js";
+import { getUsername } from "../utils/storage.js";
 
 const featuredIntroContainer = document.querySelector(".feature-intro");
 const featuredContainer = document.querySelector(".featured");
+
+const username = getUsername();
 
 const featuredProducts = async () => {
   try {
@@ -19,7 +22,19 @@ const featuredProducts = async () => {
       const productImage = product.image_url;
       const id = product.id;
 
+      let editPage = "";
+      if (username) {
+        editPage = `<a 
+            class="featured__link authenticated"  
+            href="edit.html?product_id=${id}"
+            >
+            Edit product
+          </a>
+        `;
+      }
+
       featuredContainer.innerHTML += `
+      <div>
         <a href="details.html?product_id=${id}" 
           class="featured__card">
           <div class="featured__image-wrapper">
@@ -28,8 +43,10 @@ const featuredProducts = async () => {
               alt='${title}' 
               />
           </div>
+          </a>
           <p class="featured__title"> ${title} </p>
-        </a>
+          ${editPage}
+      </div>
       `;
     });
   } catch (err) {
