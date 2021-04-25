@@ -12,17 +12,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    filter: contrast(120%) invert(5%) saturate(125%) sepia(15%) grayscale(20%)
-      blur(0.4px);
+    filter: contrast(110%) invert(5%) saturate(105%) sepia(10%) grayscale(10%);
   }
 
   @media screen and (min-width: $screen-md) {
     min-height: 75vh;
-  }
-
-  @media screen and (min-width: $screen-lg) {
-    &__image {
-      background-position: center top;
-    }
   }
 }
