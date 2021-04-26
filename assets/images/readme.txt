@@ -19,3 +19,8 @@ Source url: https://www.pexels.com/nb-no/bilde/modell-portrett-stil-skjonnhet-28
 Source url: https://unsplash.com/photos/TT-ROxWj9nA
 --- inspired_06.jpg ---
 Source url: https://unsplash.com/photos/z1B9f48F5dc
+
+--- Products page ---
+<a href='https://www.freepik.com/photos/vintage'>
+  Vintage photo created by lookstudio - www.freepik.com
+</a>

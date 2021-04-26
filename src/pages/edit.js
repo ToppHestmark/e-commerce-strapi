@@ -31,6 +31,11 @@ const editPageHtml = async () => {
   try {
     const product = await (await fetch(productById)).json();
 
+    if (product) {
+      editHeader.style.display = "block";
+      editProductForm.style.display = "block";
+    }
+
     titleInput.value = product.title;
     priceInput.value = product.price;
     featuredInput.checked = product.featured;
@@ -42,12 +47,13 @@ const editPageHtml = async () => {
 
     deleteBtn.onclick = () => deleteProduct(id, token);
   } catch (error) {
-    console.log(error);
+    displayMessage(
+      "error",
+      "Ooops, an error occured when connecting to the server",
+      ".message-container"
+    );
   } finally {
-    setTimeout(() => {
-      loadingContainer.style.display = "none";
-      editProductForm.style.display = "block";
-    }, 700);
+    loadingContainer.style.display = "none";
   }
 };
 editPageHtml();

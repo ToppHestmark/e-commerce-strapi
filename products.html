@@ -15,21 +15,35 @@
   </head>
   <body>
     <div class="nav"></div>
+    <div class="products-banner"></div>
     <main class="products-page">
-      <header class="products-page__header">
-        <h1>PRODUCTS</h1>
+      <header class="products-header">
+        <div class="products-header__left">
+          <h1>PRODUCTS</h1>
+          <p>
+            It was a rat's nest. Not a literal one, but that is what her hair
+            seemed to resemble every morning when she got up. It was going to
+            take at least an hour to get it under control and she was sick and
+            tired of it. She peered into the mirror and wondered if it was worth
+            it. It wasn't. She opened the drawer and picked up the hair
+            clippers.
+          </p>
+        </div>
+        <div class="products-header__right">
+          <img src="/assets/images/smile.jpg" alt="Red lipstick smile." />
+        </div>
       </header>
 
       <div class="searchbox-wrapper">
         <input id="search-box" placeholder="Search by titles or descriptions" />
       </div>
 
-      <section class="products">
-        <div class="spinner-grow loading" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </section>
+      <section class="products"></section>
     </main>
+
+    <div class="spinner-grow loading products-loading" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
 
     <div class="message-container"></div>
     <footer class="footer"></footer>

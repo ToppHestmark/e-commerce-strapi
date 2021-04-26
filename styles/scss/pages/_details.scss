@@ -22,7 +22,8 @@
 
   &__right {
     flex: 0.6;
-    padding: 1em;
+    margin-top: -0.4em;
+    padding: 0 1.2em;
   }
 
   &__add-to-cart {
@@ -69,6 +70,10 @@
     margin-top: 1.785em;
   }
 
+  @media screen and (max-width: $screen-xl) {
+    margin-top: 4em;
+  }
+
   @media screen and (max-width: $screen-md) {
     &__description-wrapper {
       max-width: 500px;
@@ -78,6 +83,11 @@
   @media screen and (max-width: $screen-s) {
     &__wrapper {
       display: block;
+    }
+
+    &__right {
+      margin-top: 0;
+      padding: 1em 0;
     }
   }
 }

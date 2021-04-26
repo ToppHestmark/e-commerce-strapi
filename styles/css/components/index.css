@@ -112,7 +112,7 @@
 
 .searchbox-wrapper {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 

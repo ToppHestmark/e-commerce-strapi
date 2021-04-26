@@ -1,5 +1,66 @@
 @use '../abstracts' as *;
 
+.products-banner {
+  display: none;
+  width: 100%;
+  height: 60vh;
+  background-image: url(/assets/images/smile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: -3.5em;
+  margin-top: 3.5em;
+  overflow: hidden;
+
+  @media screen and (min-width: $screen-md) {
+    visibility: collapse;
+  }
+}
+
+.products-header {
+  display: none;
+  flex: 1;
+  padding-bottom: 2em;
+  @include border-bottom;
+
+  &__left {
+    flex: 0.45;
+  }
+
+  &__right {
+    width: 100%;
+    flex: 0.55;
+    margin-left: 1em;
+    @include img-responsive;
+  }
+
+  @media screen and (max-width: $screen-xl) {
+    &__left {
+      margin-top: 1em;
+    }
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    p {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media screen and (max-width: $screen-md) {
+    padding-bottom: 1em;
+
+    &__left {
+      flex: 1;
+      text-align: center;
+      padding: 0.4em;
+    }
+
+    &__right {
+      display: none;
+    }
+  }
+}
+
 .products {
   @include grid-auto;
   @include section-spacing;
