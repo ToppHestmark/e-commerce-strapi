@@ -12,7 +12,7 @@ const createFooter = () => {
       </div>
       <div class="footer__left-company">
         <a href="#">About Nordic Swag</a>
-        <a href="#">Our <Products</a>
+        <a href="#">Our Products</a>
         <a href="#">Privacy Policy</a>
       </div>
     </div>
