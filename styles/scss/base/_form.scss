@@ -9,6 +9,13 @@ form {
   width: 100%;
   min-width: 300px;
   padding: 1em;
+  margin-bottom: 5em;
+
+  @media screen and (min-width: $screen-s) {
+    padding: 2em;
+    border-radius: 5px;
+    @include box-shadow;
+  }
 }
 
 .form {

@@ -3,6 +3,7 @@
 .cart {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 5em;
 
   &__header {
     display: none;
@@ -48,6 +49,12 @@
     font-size: 0.875rem;
   }
 
+  @media screen and (min-width: $screen-md) {
+    &__container {
+      margin-top: 2em;
+    }
+  }
+
   @media screen and (max-width: $screen-md) {
     flex-direction: column;
 
@@ -74,6 +81,10 @@
 
   &__price {
     text-decoration: underline 2px $clr--dark;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    margin-top: 4em;
   }
 
   @media screen and (max-width: $screen-md) {

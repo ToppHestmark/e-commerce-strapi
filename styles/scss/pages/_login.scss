@@ -8,6 +8,11 @@
   @include flex-col-center;
   min-height: 75vh;
 
+  h1 {
+    font-family: primary-med;
+    margin-bottom: 1em;
+  }
+
   &__button {
     margin-top: 2em;
   }
