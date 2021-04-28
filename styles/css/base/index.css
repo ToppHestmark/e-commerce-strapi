@@ -141,6 +141,7 @@ button {
   font-size: 1rem;
   border: 1px solid #000;
   letter-spacing: 0.4px;
+  transition: all 0.4s ease-in-out;
 }
 button:active, button:hover {
   background: #000;

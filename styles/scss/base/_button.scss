@@ -9,6 +9,7 @@ button {
   font-size: 1rem;
   border: 1px solid $clr--dark;
   letter-spacing: 0.4px;
+  transition: all 0.4s ease-in-out;
 
   &:active,
   &:hover {

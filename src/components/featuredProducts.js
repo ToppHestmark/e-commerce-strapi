@@ -34,7 +34,7 @@ const featuredProducts = async () => {
       }
 
       featuredContainer.innerHTML += `
-      <div>
+      <div class="featured__card">
         <a href="details.html?product_id=${id}" 
           class="featured__card">
           <div class="featured__image-wrapper">
