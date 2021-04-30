@@ -90,8 +90,13 @@
     }
   }
 
-  @media screen and (min-width: $screen-xl) {
-    grid-template-columns: repeat(4, 280px);
+  @media screen and (min-width: $screen-lg) {
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+
+    &__card {
+      max-width: 220px;
+    }
   }
 }
 
@@ -104,4 +109,15 @@
   &__img-wrapper {
     @include img-responsive;
   }
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    grid-template-columns: repeat(3, 31.2vw);
+  }
+  @media (min-width: $screen-s) and (max-width: $screen-md) {
+    grid-template-columns: repeat(2, 47vw);
+  }
+}
+
+.message-container.home {
+  position: absolute;
 }

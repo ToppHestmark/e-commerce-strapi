@@ -114,6 +114,7 @@ form input {
 
 form textarea {
   width: 100%;
+  padding: 0.4rem;
   resize: vertical;
   border: 1px solid rgba(51, 51, 51, 0.685);
 }
@@ -366,6 +367,7 @@ button:active, button:hover {
   margin: 0.375em 0;
   color: #000;
   font-size: 0.875rem;
+  transition: all 0.2s ease-in-out;
 }
 .footer__left-customer a:hover, .footer__left-company a:hover {
   color: #ea325b;
@@ -374,6 +376,8 @@ button:active, button:hover {
   font-size: 1.375rem;
   margin: 1em 0.4em;
   cursor: pointer;
+  color: #333;
+  transition: all 0.2s ease-in-out;
 }
 .footer__right i:hover {
   color: #ea325b;
@@ -609,9 +613,13 @@ button:active, button:hover {
     margin: 0 1em;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .featured {
-    grid-template-columns: repeat(4, 280px);
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+  }
+  .featured__card {
+    max-width: 220px;
   }
 }
 
@@ -647,6 +655,20 @@ button:active, button:hover {
 .inspired__img-wrapper img {
   width: 100%;
   height: auto;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .inspired {
+    grid-template-columns: repeat(3, 31.2vw);
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .inspired {
+    grid-template-columns: repeat(2, 47vw);
+  }
+}
+
+.message-container.home {
+  position: absolute;
 }
 
 .details {
@@ -975,6 +997,10 @@ button:active, button:hover {
   margin-top: 2em;
 }
 
+.exclamation-circle {
+  color: #ff5959;
+}
+
 .add {
   display: flex;
   flex-direction: column;
@@ -985,6 +1011,16 @@ button:active, button:hover {
   margin: 0.875em 0;
   font-family: primary-med;
   text-align: center;
+}
+
+.validation {
+  font-size: 0.75rem;
+}
+.validation .error {
+  color: #ff5959;
+}
+.validation .success {
+  color: #4bb543;
 }
 
 #edit-form {

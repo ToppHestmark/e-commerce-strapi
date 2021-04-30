@@ -1,6 +1,6 @@
-import { displayMessage } from "../components/index.js";
 import { getUserToken } from "../utils/storage.js";
 import { clearMessage, setFocus, addNewProduct } from "../helpers/index.js";
+import productValidation from "../validation/productValidation.js";
 
 const token = getUserToken();
 if (!token) window.location.replace("/");
@@ -26,19 +26,6 @@ addProductForm.onsubmit = (event) => {
   const imageUrlValue = imageUrlInput.value;
   const descriptionValue = descriptionInput.value.trim();
 
-  if (
-    titleValue.length === 0 ||
-    isNaN(priceValue) ||
-    imageUrlValue.length === 0 ||
-    descriptionValue.length === 0
-  ) {
-    return displayMessage(
-      "error",
-      "Please apply proper value!",
-      ".form-message-container"
-    );
-  }
-
   const props = {
     titleValue,
     priceValue,
@@ -49,5 +36,6 @@ addProductForm.onsubmit = (event) => {
     token,
   };
 
-  addNewProduct(props);
+  productValidation(titleValue, priceValue, imageUrlValue, descriptionValue) &&
+    addNewProduct(props);
 };

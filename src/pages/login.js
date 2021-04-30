@@ -1,4 +1,4 @@
-import { displayMessage } from "../components/index.js";
+import loginValidation from "../validation/loginValidation.js";
 import { performLogin, clearMessage, setFocus } from "../helpers/index.js";
 import { getUsername } from "../utils/storage.js";
 
@@ -23,13 +23,6 @@ loginForm.onsubmit = (event) => {
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
 
-  if (usernameValue.length < 3 || passwordValue.length < 3) {
-    return displayMessage(
-      "error",
-      "Invalid values.",
-      ".form-message-container"
-    );
-  }
-
-  performLogin(usernameValue, passwordValue);
+  loginValidation(usernameValue, passwordValue) &&
+    performLogin(usernameValue, passwordValue);
 };

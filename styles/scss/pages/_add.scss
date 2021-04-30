@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
 
+.exclamation-circle {
+  color: $clr--danger;
+}
+
 .add {
   @include flex-col-center;
 
@@ -7,5 +11,17 @@
     margin: 0.875em 0;
     font-family: primary-med;
     text-align: center;
+  }
+}
+
+.validation {
+  font-size: 0.75rem;
+
+  .error {
+    color: $clr--danger;
+  }
+
+  .success {
+    color: $clr--success;
   }
 }

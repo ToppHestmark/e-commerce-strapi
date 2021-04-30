@@ -40,9 +40,6 @@ const addNewProduct = async (props) => {
       );
       addProductForm.reset();
     }
-
-    res.error &&
-      displayMessage("error", res.message, ".form-message-container");
   } catch (error) {
     displayMessage(
       "error",

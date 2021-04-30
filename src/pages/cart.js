@@ -1,6 +1,10 @@
 import { productsUrl } from "../settings/apis.js";
 import { getExistingCart } from "../utils/storage.js";
-import { showTotalPrice, showCartItems } from "../components/index.js";
+import {
+  showTotalPrice,
+  showCartItems,
+  displayMessage,
+} from "../components/index.js";
 
 const cartHeaderContainer = document.querySelector(".cart__header");
 const loadingContainer = document.querySelector(".loading");
@@ -10,8 +14,8 @@ const cartPage = async () => {
     const products = await (await fetch(productsUrl)).json();
 
     if (products) {
-      loadingContainer.style.display = "none";
       cartHeaderContainer.style.display = "block";
+      loadingContainer.style.display = "none";
     }
 
     const cartItemsArray = getExistingCart();
@@ -20,7 +24,13 @@ const cartPage = async () => {
     showCartItems(products, cartIds);
     showTotalPrice(products, cartIds);
   } catch (error) {
-    console.log(error);
+    displayMessage(
+      "error",
+      "Ooops, An error occured when connecting to server.",
+      ".message-container"
+    );
+  } finally {
+    loadingContainer.style.display = "none";
   }
 };
 cartPage();

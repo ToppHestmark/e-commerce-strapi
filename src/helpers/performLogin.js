@@ -29,7 +29,6 @@ const performLogin = async (username, password) => {
       window.location.replace("/");
     }
   } catch (error) {
-    console.log(error);
     displayMessage(
       "error",
       "Error when trying to login.",
