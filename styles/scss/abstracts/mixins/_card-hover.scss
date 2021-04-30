@@ -2,11 +2,13 @@
 
 @mixin card-hover {
   transition: all 0.3s ease-in-out;
-  scale: 0.95;
   border-radius: 3px;
+  scale: 0.95;
+  opacity: 0.95;
 
   &:hover {
     @include box-shadow;
     scale: 1;
+    opacity: 1;
   }
 }

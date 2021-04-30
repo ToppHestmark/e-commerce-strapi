@@ -34,19 +34,18 @@ const featuredProducts = async () => {
       }
 
       featuredContainer.innerHTML += `
-      <div class="featured__card">
-        <a href="details.html?product_id=${id}" 
-          class="featured__card">
-          <div class="featured__image-wrapper">
-            <img 
-              src='${productImage}' 
-              alt='${title}' 
-              />
-          </div>
-          </a>
-          <p class="featured__title"> ${title} </p>
-          ${editPage}
-      </div>
+        <div class="featured__card">
+          <a href="details.html?product_id=${id}">
+            <div class="featured__image-wrapper">
+              <img 
+                src='${productImage}' 
+                alt='${title}' 
+                />
+            </div>
+            </a>
+            <p class="featured__title"> ${title} </p>
+            ${editPage}
+        </div>
       `;
     });
   } catch (err) {

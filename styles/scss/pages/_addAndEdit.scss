@@ -14,6 +14,22 @@
   }
 }
 
+#edit-form {
+  display: none;
+}
+
+.edit__header {
+  display: none;
+  margin: 0.875em 0;
+  text-align: center;
+  font-family: primary-med;
+  text-align: center;
+
+  @media screen and (max-width: $screen-xl) {
+    margin-top: 1.175em;
+  }
+}
+
 .validation {
   font-size: 0.75rem;
 
