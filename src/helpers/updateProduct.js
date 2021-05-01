@@ -28,25 +28,36 @@ const updateProduct = async (props) => {
     }),
   };
 
+  const successMessage = `
+  <div>
+    <i class="fas fa-check-circle"></i>
+    <div class="description">
+      Successfully updated the product.
+    </div>
+  </div>
+`;
+
+  const errorMessage = `
+    <div>
+      <i class="fas fa-exclamation-triangle"></i>
+      <div class="description">
+        Ooops, can't connect to the server.
+      </div>
+    </div>
+  `;
+
   try {
     const res = await (await fetch(url, options)).json();
 
     if (res.created_at) {
-      displayMessage(
-        "success",
-        "Successfully updated product.",
-        ".form-message-container"
-      );
+      displayMessage("success", successMessage, ".form-message-container");
+      setTimeout(() => window.location.replace("/products.html"), 800);
     }
 
     res.error &&
       displayMessage("error", res.message, ".form-message-container");
   } catch (error) {
-    displayMessage(
-      "error",
-      "Error occured when trying to connection to server..",
-      ".form-message-container"
-    );
+    displayMessage("error", errorMessage, ".form-message-container");
   }
 };
 

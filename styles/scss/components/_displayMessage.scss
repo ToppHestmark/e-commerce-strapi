@@ -17,20 +17,48 @@
 }
 
 .form-message-container {
-  max-width: 400px;
-  text-align: center;
+  .error,
+  .success {
+    @include box-shadow;
+    padding: 1.625em 3.5em;
+    position: fixed;
+    font-family: primary-reg;
+    bottom: 0;
+    right: 0;
+    margin: 0.5em;
+    border-radius: 5px;
+    background: $clr--white;
+
+    .description {
+      padding-left: 3em;
+    }
+
+    i {
+      position: absolute;
+      font-size: 2rem;
+      margin-top: -0.125em;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      padding: 0.75em 1em;
+    }
+  }
 }
 
 .form-message-container :is(.error) {
-  color: $clr--danger;
+  display: block;
+  border-bottom: 8px solid $clr--danger;
+
+  i {
+    color: $clr--danger;
+  }
 }
 
 .form-message-container :is(.success) {
-  @include position-center;
-  @include box-shadow;
-  padding: 1.6em;
-  font-size: 2rem;
-  color: $clr--gray-dark;
-  background: $clr--success;
-  z-index: 5;
+  display: block;
+  border-bottom: 8px solid $clr--success;
+
+  i {
+    color: $clr--success;
+  }
 }

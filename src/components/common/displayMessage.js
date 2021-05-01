@@ -3,7 +3,7 @@ const displayMessage = (messageType, message, targetElement) => {
 
   element.innerHTML = `
     <div class="${messageType}" role="alert">
-      ${message}
+        ${message}
     </div>
   `;
 };
