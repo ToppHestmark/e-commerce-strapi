@@ -5,22 +5,33 @@ const imgExtensionValidator = /\jpg|jpeg|png+$/i;
 const imageUrlInput = document.querySelector("#image_url");
 const imageUrlMessage = document.querySelector(".imageurl-validation");
 
+const isEmptyMsg = () => {
+  imageUrlInput.style.borderBottom = "1px solid #ff5959";
+  imageUrlMessage.innerHTML = `<small class="error">Image URL is required</small>`;
+};
+
+const invalidValueMsg = () => {
+  imageUrlInput.style.borderBottom = "1px solid #ff5959";
+  imageUrlMessage.innerHTML = `<small class="error">Please enter a valid URL</small>`;
+};
+
+const isValidMsg = () => {
+  imageUrlInput.style.borderBottom = "1px solid #333";
+  imageUrlMessage.innerHTML = `<small class="success">Looking good</small>`;
+  return true;
+};
+
 const validateUrl = (imageUrlValue) => {
   const isValidUrl = urlValidator.test(imageUrlValue);
   const containImageExtension = imgExtensionValidator.test(imageUrlValue);
 
-  if (imageUrlValue === "") {
-    imageUrlInput.style.borderBottom = "1px solid #ff5959";
-    imageUrlMessage.innerHTML = `<small class="error">Image URL is required</small>`;
-  } else if (!isValidUrl || !containImageExtension) {
-    imageUrlInput.style.borderBottom = "1px solid #ff5959";
-    imageUrlMessage.innerHTML = `<small class="error">Please enter a valid URL</small>`;
-  } else {
-    imageUrlInput.style.borderBottom = "1px solid #333";
-    imageUrlMessage.innerHTML = `<small class="success">Looking good</small>`;
-    return true;
-  }
-  return false;
+  return imageUrlValue === ""
+    ? isEmptyMsg()
+    : !isValidUrl || !containImageExtension
+    ? invalidValueMsg()
+    : isValidUrl && containImageExtension
+    ? isValidMsg()
+    : false;
 };
 
 export default validateUrl;
