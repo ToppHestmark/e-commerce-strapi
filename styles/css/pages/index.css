@@ -528,6 +528,10 @@
   display: none;
 }
 
+.edit__productname {
+  color: #ea325b;
+  font-weight: 900;
+}
 .edit__header {
   display: none;
   margin: 0.875em 0;

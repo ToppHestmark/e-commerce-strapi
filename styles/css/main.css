@@ -334,6 +334,7 @@ button:active, button:hover {
 .form-message-container :is(.error) {
   display: block;
   border-bottom: 8px solid #ff5959;
+  color: #ff5959;
 }
 .form-message-container :is(.error) i {
   color: #ff5959;
@@ -342,6 +343,7 @@ button:active, button:hover {
 .form-message-container :is(.success) {
   display: block;
   border-bottom: 8px solid #4bb543;
+  color: #4bb543;
 }
 .form-message-container :is(.success) i {
   color: #4bb543;
@@ -1053,6 +1055,10 @@ button:active, button:hover {
   display: none;
 }
 
+.edit__productname {
+  color: #ea325b;
+  font-weight: 900;
+}
 .edit__header {
   display: none;
   margin: 0.875em 0;

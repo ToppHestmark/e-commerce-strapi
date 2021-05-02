@@ -32,7 +32,7 @@ const updateProduct = async (props) => {
   <div>
     <i class="fas fa-check-circle"></i>
     <div class="description">
-      Successfully updated the product.
+      Product successfully update.
     </div>
   </div>
 `;
@@ -51,7 +51,7 @@ const updateProduct = async (props) => {
 
     if (res.created_at) {
       displayMessage("success", successMessage, ".form-message-container");
-      setTimeout(() => window.location.replace("/products.html"), 800);
+      setTimeout(() => window.location.replace("/products.html"), 1000);
     }
 
     res.error &&

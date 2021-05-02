@@ -44,7 +44,7 @@ const editPageHtml = async () => {
     descriptionInput.value = product.description;
 
     document.title = `Edit ${product.title}`;
-    editHeader.innerHTML = `Edit ${product.title}`;
+    editHeader.innerHTML = `Edit <span class="edit__productname">'${product.title}'</span>`;
 
     deleteBtn.onclick = () => deleteProduct(id, token);
   } catch (error) {

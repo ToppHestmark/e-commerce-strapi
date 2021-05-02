@@ -48,6 +48,7 @@
 .form-message-container :is(.error) {
   display: block;
   border-bottom: 8px solid $clr--danger;
+  color: $clr--danger;
 
   i {
     color: $clr--danger;
@@ -57,6 +58,7 @@
 .form-message-container :is(.success) {
   display: block;
   border-bottom: 8px solid $clr--success;
+  color: $clr--success;
 
   i {
     color: $clr--success;

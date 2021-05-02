@@ -180,6 +180,7 @@
 .form-message-container :is(.error) {
   display: block;
   border-bottom: 8px solid #ff5959;
+  color: #ff5959;
 }
 .form-message-container :is(.error) i {
   color: #ff5959;
@@ -188,6 +189,7 @@
 .form-message-container :is(.success) {
   display: block;
   border-bottom: 8px solid #4bb543;
+  color: #4bb543;
 }
 .form-message-container :is(.success) i {
   color: #4bb543;
