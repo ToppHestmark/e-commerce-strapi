@@ -16,9 +16,13 @@
   <body>
     <div class="nav"></div>
     <main class="details">
+      <div class="spinner-grow loading" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
       <section class="details__container"></section>
     </main>
 
+    <div class="message-container"></div>
     <footer class="footer"></footer>
 
     <script
@@ -27,7 +31,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./src/app.js" type="module"></script>
     <script src="./src/pages/details.js" type="module"></script>
   </body>
 </html>

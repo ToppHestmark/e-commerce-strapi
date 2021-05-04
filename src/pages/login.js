@@ -1,6 +1,10 @@
+import { createNavbar, createFooter } from "../components/index.js";
 import loginValidation from "../validation/loginValidation.js";
 import { performLogin, clearMessage, setFocus } from "../helpers/index.js";
 import { getUsername } from "../utils/storage.js";
+
+createNavbar();
+createFooter();
 
 const userExist = getUsername();
 

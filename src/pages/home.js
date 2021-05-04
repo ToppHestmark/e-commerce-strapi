@@ -1,11 +1,16 @@
-import { homeBanner } from "../settings/apis.js";
 import {
   createBanner,
   featuredProducts,
   lowerFlyer,
   upperFlyer,
   inspiredSectionHtml,
+  createNavbar,
+  createFooter,
 } from "../components/index.js";
+import { homeBanner } from "../settings/apis.js";
+
+createNavbar();
+createFooter();
 
 const upperFlyerSection = document.querySelector(".home-flyer.upper");
 const inspiredSection = document.querySelector(".inspired");

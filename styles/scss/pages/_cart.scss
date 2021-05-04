@@ -26,6 +26,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.25em 0;
+    transition: all 0.4s ease-in-out;
+
     @include border-bottom;
   }
 
@@ -49,6 +51,19 @@
     font-size: 0.875rem;
   }
 
+  &__trash-icon {
+    font-size: 1.25rem;
+    color: $clr--dark-700;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $clr--dark;
+      scale: 1.1;
+    }
+  }
+
   @media screen and (min-width: $screen-md) {
     &__container {
       margin-top: 2em;
@@ -57,10 +72,6 @@
 
   @media screen and (max-width: $screen-md) {
     flex-direction: column;
-
-    &__container {
-      padding: 0;
-    }
   }
 }
 
@@ -88,6 +99,6 @@
   }
 
   @media screen and (max-width: $screen-md) {
-    padding: 0;
+    padding: 0 1em;
   }
 }

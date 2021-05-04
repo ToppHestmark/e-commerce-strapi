@@ -1,9 +1,14 @@
 import { productsUrl } from "../settings/apis.js";
 import {
+  createNavbar,
+  createFooter,
   searchBox,
   showProducts,
   displayMessage,
 } from "../components/index.js";
+
+createNavbar();
+createFooter();
 
 const loadingContainer = document.querySelector(".loading");
 const productsBanner = document.querySelector(".products-banner");

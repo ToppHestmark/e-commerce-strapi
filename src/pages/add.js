@@ -1,6 +1,10 @@
+import { createNavbar, createFooter } from "../components/index.js";
 import { getUserToken } from "../utils/storage.js";
 import { clearMessage, setFocus, addNewProduct } from "../helpers/index.js";
 import productValidation from "../validation/productValidation.js";
+
+createNavbar();
+createFooter();
 
 const token = getUserToken();
 if (!token) window.location.replace("/");

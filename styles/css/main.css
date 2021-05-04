@@ -956,6 +956,7 @@ button:active, button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 1.25em 0;
+  transition: all 0.4s ease-in-out;
   border-bottom: 1px solid #d1d1d1;
 }
 .cart__image-wrapper {
@@ -976,6 +977,17 @@ button:active, button:hover {
 .cart__link {
   font-size: 0.875rem;
 }
+.cart__trash-icon {
+  font-size: 1.25rem;
+  color: rgba(51, 51, 51, 0.685);
+  cursor: pointer;
+  margin-top: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.cart__trash-icon:hover {
+  color: #000;
+  scale: 1.1;
+}
 @media screen and (min-width: 768px) {
   .cart__container {
     margin-top: 2em;
@@ -984,9 +996,6 @@ button:active, button:hover {
 @media screen and (max-width: 768px) {
   .cart {
     flex-direction: column;
-  }
-  .cart__container {
-    padding: 0;
   }
 }
 
@@ -1012,7 +1021,7 @@ button:active, button:hover {
 }
 @media screen and (max-width: 768px) {
   .subtotal {
-    padding: 0;
+    padding: 0 1em;
   }
 }
 

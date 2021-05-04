@@ -5,8 +5,15 @@ import {
   deleteProduct,
   updateProduct,
 } from "../helpers/index.js";
-import { displayMessage } from "../components/index.js";
+import {
+  displayMessage,
+  createNavbar,
+  createFooter,
+} from "../components/index.js";
 import productValidation from "../validation/productValidation.js";
+
+createNavbar();
+createFooter();
 
 const params = new URLSearchParams(document.location.search.toString());
 const id = params.get("product_id");
