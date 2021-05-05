@@ -16,6 +16,9 @@ body {
   width: 100%;
   max-width: 1920px;
   min-height: 100vh;
+  -webkit-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
+  -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
+  box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
 }
 
 main {
@@ -220,6 +223,11 @@ button:active, button:hover {
   }
 }
 @media screen and (min-width: 1200px) {
+  .navbar {
+    -webkit-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
+    -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
+    box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
+  }
   .navbar__logo {
     top: -18%;
     padding-top: 0;
@@ -273,7 +281,8 @@ button:active, button:hover {
 #search-box {
   margin: 2.375em 1em 0.5em 1em;
   padding-bottom: 0.125em;
-  font-size: 1.25rem;
+  font-family: primary-reg;
+  font-size: 1.125rem;
   border: 0;
   outline: 0;
   border-bottom: 1px solid rgba(51, 51, 51, 0.685);
@@ -281,13 +290,18 @@ button:active, button:hover {
 #search-box::placeholder {
   font-size: 0.85rem;
 }
+@media screen and (max-width: 768px) {
+  #search-box {
+    font-size: 0.975rem;
+  }
+}
 
 .message-container {
-  position: fixed;
+  width: 100%;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
   text-align: center;
   z-index: -1;
 }
@@ -298,6 +312,10 @@ button:active, button:hover {
   font-size: 1.125rem;
   font-weight: 600;
   color: #333;
+}
+
+.message-container.search {
+  position: relative;
 }
 
 .form-message-container .error,
@@ -363,7 +381,7 @@ button:active, button:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  filter: contrast(110%) invert(5%) saturate(105%) sepia(10%) grayscale(10%);
+  filter: contrast(115%) invert(5%) saturate(105%) sepia(10%) grayscale(5%);
 }
 @media screen and (min-width: 768px) {
   .home-banner {

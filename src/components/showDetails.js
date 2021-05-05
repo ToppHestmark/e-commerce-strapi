@@ -14,6 +14,8 @@ const showDetails = (product) => {
   const isInCart = itemFromCart.find((item) => parseInt(item.id) === productId);
   const cartIconState = isInCart ? "fa-shopping-cart" : "fa-cart-arrow-down";
 
+  document.title = `${title} | Nordic Swag | Scandinavian inspired clothing and fashion`;
+
   detailsContainer.innerHTML = `
     <div class="details__wrapper">
       <div class="details__image-wrapper">

@@ -9,12 +9,17 @@
 #search-box {
   margin: 2.375em 1em 0.5em 1em;
   padding-bottom: 0.125em;
-  font-size: 1.25rem;
+  font-family: primary-reg;
+  font-size: 1.125rem;
   border: 0;
   outline: 0;
   border-bottom: 1px solid $clr--dark-700;
 
   &::placeholder {
     font-size: 0.85rem;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    font-size: 0.975rem;
   }
 }

@@ -79,6 +79,8 @@
   }
 
   @media screen and (min-width: $screen-xl) {
+    @include box-shadow;
+
     &__logo {
       top: -18%;
       padding-top: 0;

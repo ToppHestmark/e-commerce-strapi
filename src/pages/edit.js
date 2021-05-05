@@ -50,7 +50,7 @@ const editPageHtml = async () => {
     imageUrlInput.value = product.image_url;
     descriptionInput.value = product.description;
 
-    document.title = `Edit ${product.title}`;
+    document.title = `Edit ${product.title} | Nordic Swag`;
     editHeader.innerHTML = `Edit <span class="edit__productname">'${product.title}'</span>`;
 
     deleteBtn.onclick = () => deleteProduct(id, token);

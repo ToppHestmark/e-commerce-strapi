@@ -23,9 +23,9 @@ const searchBox = (products) => {
 
     searchResults.length === 0
       ? displayMessage(
-          "message",
+          "search-message",
           "Sorry, no matching title or product description.",
-          ".message-container"
+          ".message-container.search"
         )
       : displayMessage("message", "", ".message-container");
 
