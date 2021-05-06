@@ -616,7 +616,7 @@ button:active, button:hover {
 }
 .featured__card {
   padding: 0.875em;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.35s ease-in-out;
   scale: 0.95;
   opacity: 0.95;
 }
@@ -624,7 +624,7 @@ button:active, button:hover {
   -webkit-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
   -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
   box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
-  scale: 1;
+  scale: 0.97;
   opacity: 1;
 }
 .featured__title {
@@ -890,7 +890,7 @@ button:active, button:hover {
   margin: 0.875em -0.4125em;
   padding: 1.625em;
   border: 0.7px solid #d1d1d1;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.35s ease-in-out;
   scale: 0.95;
   opacity: 0.95;
 }
@@ -898,7 +898,7 @@ button:active, button:hover {
   -webkit-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
   -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
   box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
-  scale: 1;
+  scale: 0.97;
   opacity: 1;
 }
 .products__title, .products__price {
@@ -1031,6 +1031,15 @@ button:active, button:hover {
 }
 .subtotal__price {
   text-decoration: underline 2px #000;
+}
+.subtotal__button {
+  margin-top: 0.75em;
+  background: #000;
+  color: #fff;
+}
+.subtotal__button:hover {
+  background: #333;
+  border: 1px solid #333;
 }
 @media screen and (min-width: 768px) {
   .subtotal {

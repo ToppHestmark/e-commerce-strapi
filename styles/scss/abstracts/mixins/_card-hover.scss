@@ -1,13 +1,13 @@
 @use './box-shadow' as *;
 
 @mixin card-hover {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.35s ease-in-out;
   scale: 0.95;
   opacity: 0.95;
 
   &:hover {
     @include box-shadow;
-    scale: 1;
+    scale: 0.97;
     opacity: 1;
   }
 }

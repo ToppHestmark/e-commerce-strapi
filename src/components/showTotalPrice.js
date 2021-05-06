@@ -35,6 +35,11 @@ const showTotalPrice = (products, cartIds) => {
       <p class="subtotal__price"> 
         $ ${totalPrice} 
       </p>
+      <button 
+        class="subtotal__button"
+        type="button">
+        Checkout
+      </button>
     </span>
   `;
 };

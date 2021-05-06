@@ -24,7 +24,7 @@ const validMsg = () => {
 
 const validatePrice = (priceValue) => {
   const isEmpty = priceValue === "";
-  const isNumberic = /^[0-9]/.test(priceValue);
+  const isNumberic = /^[0-9][\.\d]*(,\d+)?$/.test(priceValue);
   const isZero = parseInt(priceValue) === 0;
 
   return isEmpty

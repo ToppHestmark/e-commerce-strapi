@@ -29,7 +29,6 @@ const cartPageHtml = async () => {
     showCartItems(products, cartIds);
     showTotalPrice(products, cartIds);
   } catch (error) {
-    console.log(error);
     displayMessage(
       "error",
       "Ooops, An error occured when connecting to server.",
