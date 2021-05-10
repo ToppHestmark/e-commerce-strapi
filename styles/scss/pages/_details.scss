@@ -40,7 +40,7 @@
       background: #e9e8e8d5;
       color: $clr--dark-300;
       border-radius: 2px;
-      margin: 2.2em 0 0 -1em;
+      margin: 2.6em 0 0 -1em;
       transition: all 0.4s ease-out;
 
       @include box-shadow;
@@ -67,12 +67,20 @@
   }
 
   &__description-wrapper {
+    @include border-top;
+    padding-top: 2em;
     max-width: 500px;
     margin-top: 1.785em;
   }
 
   @media screen and (max-width: $screen-xl) {
     margin-top: 4em;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    &__right {
+      padding-left: 5em;
+    }
   }
 
   @media screen and (max-width: $screen-md) {
@@ -88,7 +96,7 @@
 
     &__right {
       margin-top: 0;
-      padding: 1em 0;
+      padding: 1em 0 4em 0;
     }
   }
 }
