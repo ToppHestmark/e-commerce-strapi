@@ -103,6 +103,7 @@
 
   &__img-wrapper {
     @include img-responsive;
+    filter: grayscale(5%) contrast(95%);
   }
 
   @media (min-width: $screen-md) and (max-width: $screen-xl) {

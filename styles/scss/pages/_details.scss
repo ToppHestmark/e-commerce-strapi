@@ -1,5 +1,13 @@
 @use '../abstracts' as *;
 
+.breadcrumb {
+  margin: 1em 1.25em;
+
+  @media screen and (min-width: $screen-lg) {
+    display: none;
+  }
+}
+
 .details {
   width: 100%;
 
@@ -13,6 +21,7 @@
 
   &__image-wrapper {
     flex: 0.4;
+    padding: 0.5em;
 
     img {
       width: 100%;
@@ -23,7 +32,7 @@
   &__right {
     flex: 0.6;
     margin-top: -0.4em;
-    padding: 0 1.2em;
+    padding: 0 1em 0 2em;
   }
 
   &__add-to-cart {
@@ -92,6 +101,10 @@
   @media screen and (max-width: $screen-s) {
     &__wrapper {
       display: block;
+    }
+
+    &__image-wrapper {
+      padding: 2em;
     }
 
     &__right {
