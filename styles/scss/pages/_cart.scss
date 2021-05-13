@@ -68,6 +68,10 @@
     &__container {
       margin: 2em 0;
     }
+
+    &__image-wrapper img {
+      width: 100px;
+    }
   }
 
   @media screen and (max-width: $screen-md) {

@@ -8,12 +8,7 @@ const createBanner = async (homeBanner) => {
     const getBanner = await (await fetch(homeBanner)).json();
     const bannerImg = getBanner.image_url;
 
-    bannerContainer.innerHTML = `
-      <div
-        class="home-banner__image"
-        style="background-image: url('${bannerImg}');"
-        />
-      `;
+    bannerContainer.style.backgroundImage = `url(${bannerImg})`;
   } catch (err) {
     displayMessage(
       "error",

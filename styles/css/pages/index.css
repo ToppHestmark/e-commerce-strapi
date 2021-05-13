@@ -489,6 +489,9 @@
   .cart__container {
     margin: 2em 0;
   }
+  .cart__image-wrapper img {
+    width: 100px;
+  }
 }
 @media screen and (max-width: 768px) {
   .cart {
