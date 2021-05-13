@@ -6,9 +6,8 @@ const loadingContainer = document.querySelector(".loading");
 const createBanner = async (homeBanner) => {
   try {
     const getBanner = await (await fetch(homeBanner)).json();
-    const bannerImg = getBanner.image_url;
 
-    bannerContainer.style.backgroundImage = `url(${bannerImg})`;
+    bannerContainer.style.backgroundImage = `url(${getBanner.image_url})`;
   } catch (err) {
     displayMessage(
       "error",

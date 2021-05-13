@@ -232,7 +232,12 @@
 @media screen and (min-width: 768px) {
   .home-banner {
     height: 75vh;
-    min-height: 630px;
+    min-height: 480px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home-banner {
+    min-height: 620px;
   }
 }
 

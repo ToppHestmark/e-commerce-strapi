@@ -39,7 +39,8 @@ const featuredProducts = async () => {
             <div class="featured__image-wrapper">
               <img 
                 src='${productImage}' 
-                alt='${title}' 
+                alt='${title}'
+                loading="lazy"
                 />
             </div>
             </a>

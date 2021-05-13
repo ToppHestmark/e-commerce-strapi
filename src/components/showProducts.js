@@ -31,6 +31,7 @@ const showProducts = (products) => {
           <img 
             src='${productImage}' 
             alt='${title}' 
+            loading="lazy"
             />
         </div>
         <div class="products__title"> ${title} </div>

@@ -13,6 +13,10 @@
 
   @media screen and (min-width: $screen-md) {
     height: 75vh;
-    min-height: 630px;
+    min-height: 480px;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    min-height: 620px;
   }
 }
