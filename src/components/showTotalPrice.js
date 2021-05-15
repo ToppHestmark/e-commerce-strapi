@@ -4,6 +4,7 @@ const cartHeaderContainer = document.querySelector(".cart__header");
 
 const showTotalPrice = (products, cartIds) => {
   subtotalContainer.innerHTML = "";
+
   const cartItemPrices = products.map((product) => {
     if (!cartIds.includes(product.id)) return null;
     return product.price;

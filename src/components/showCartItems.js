@@ -3,6 +3,7 @@ import { removeCartItem } from "../helpers/index.js";
 
 const showCartItems = (products, cartIds) => {
   cartContainer.innerHTML = "";
+
   products.map((product) => {
     if (!cartIds.includes(product.id)) return null;
 
