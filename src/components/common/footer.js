@@ -30,6 +30,7 @@ const createFooter = () => {
         <i class="fab fa-apple-pay"></i>
         <i class="fab fa-alipay"></i>
       </div>
+        <a href="https://github.com/ToppHestmark" target="_blank">By Suphachai Hestmark</a>
     </div>
   `;
 };
