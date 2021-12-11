@@ -73,9 +73,9 @@
 }
 @media screen and (min-width: 1200px) {
   .navbar {
-    -webkit-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
-    -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
-    box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
+    -webkit-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.1);
+    -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.1);
+    box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.1);
   }
   .navbar__logo {
     top: -18%;
@@ -84,7 +84,7 @@
 }
 @media screen and (max-width: 1200px) {
   .navbar {
-    border-bottom: 1px solid #d1d1d1;
+    border-bottom: 0.5px solid #d1d1d1;
     background: #fff;
   }
   .navbar__toggler-icon {
@@ -169,9 +169,9 @@
 
 .form-message-container .error,
 .form-message-container .success {
-  -webkit-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
-  -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
-  box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.2);
+  -webkit-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.1);
+  -moz-box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.1);
+  box-shadow: 0px 0px 11px 3px rgba(62, 66, 66, 0.1);
   padding: 1.625em 3.5em;
   position: fixed;
   font-family: primary-reg;
@@ -249,7 +249,7 @@
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #d1d1d1;
+  border-top: 0.5px solid #d1d1d1;
 }
 .footer__left {
   display: flex;

@@ -37,6 +37,7 @@ const addNewProduct = async (props) => {
       </div>
     </div>
   `;
+
   const errorMessage = `
     <div>
       <i class="fas fa-exclamation-triangle"></i>

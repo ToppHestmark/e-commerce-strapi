@@ -24,23 +24,22 @@ const showProducts = (products) => {
     }
 
     productsContainer.innerHTML += `
-    <div class="products__card">
-      <a href="details.html?product_id=${id}"
-         >
-        <div class="products__image-wrapper">
-          <img 
-            src='${productImage}' 
-            alt='${title}' 
-            loading="lazy"
-            />
-        </div>
-        <div class="products__title"> ${title} </div>
-        <div class="products__price">$ ${price} </div>
+      <div class="products__card">
+        <a href="details.html?product_id=${id}">
+          <div class="products__image-wrapper">
+            <img 
+              src='${productImage}' 
+              alt='${title}' 
+              loading="lazy"
+              />
+          </div>
+          <div class="products__title"> ${title} </div>
+          <div class="products__price">$ ${price} </div>
         </a>
         <div>
-         ${editPage}
+        ${editPage}
         </div>
-    </div>
+      </div>
     `;
   });
 };
